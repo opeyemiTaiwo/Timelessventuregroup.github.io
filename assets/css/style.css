@@ -143,6 +143,7 @@ h6 {
 
 #header .logo img {
   max-height: 40px;
+  float: left; /* Aligns the logo to the left */
 }
 
 /*--------------------------------------------------------------
