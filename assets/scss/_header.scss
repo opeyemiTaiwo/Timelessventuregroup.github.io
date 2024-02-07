@@ -19,13 +19,14 @@
     font-weight: 400;
     letter-spacing: 2px;
     text-transform: uppercase;
-    float: left; 
+    text-align: left;
     a {
       color: #fff;
     }
 
     img {
       max-height: 40px;
+      text-align: left;
     }
   }
 }
