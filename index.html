@@ -30,36 +30,75 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- Timeless Venture Lab band -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
   <style>
+    /* Front-page hero: a second route into the Lab */
     .hero-actions{display:flex; flex-wrap:wrap; align-items:center; gap:1rem 1.5rem}
     .btn-lab-inline{font-family:"Poppins",sans-serif; font-weight:600; font-size:.95rem;
       color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.45);
       padding-bottom:2px; transition:border-color .25s}
     .btn-lab-inline:hover{color:#fff; border-color:#fff}
 
-    .tvlab{background:#001F5C; color:#fff; padding:70px 0}
-    .tvlab__grid{display:grid; grid-template-columns:1fr; gap:40px; align-items:center}
-    @media (min-width:992px){.tvlab__grid{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}}
-    .tvlab__eyebrow{font-family:"Poppins",sans-serif; font-size:.75rem; font-weight:600;
-      letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.55); margin:0 0 14px}
-    .tvlab h2{font-family:"Poppins",sans-serif; font-weight:600; font-size:clamp(1.75rem,3.4vw,2.6rem);
-      line-height:1.1; letter-spacing:-.03em; color:#fff; margin:0 0 18px; max-width:18ch}
-    .tvlab p{color:rgba(255,255,255,.72); font-size:1rem; line-height:1.65; max-width:54ch; margin:0}
-    .tvlab__list{list-style:none; margin:22px 0 0; padding:0; display:grid; gap:10px}
-    .tvlab__list li{position:relative; padding-left:20px; color:rgba(255,255,255,.72); font-size:.95rem}
-    .tvlab__list li:before{content:""; position:absolute; left:0; top:.72em; width:8px; height:1px;
-      background:rgba(255,255,255,.5)}
-    .tvlab__btn{display:inline-flex; align-items:center; gap:10px; margin-top:30px;
-      background:#fff; color:#001F5C; text-decoration:none; font-family:"Poppins",sans-serif;
-      font-weight:600; font-size:.9rem; padding:14px 26px; border-radius:100px;
-      transition:background-color .25s}
-    .tvlab__btn:hover{background:#D9E2F5; color:#001F5C}
-    .tvlab__btn svg{transition:transform .25s}
+    /* The Lab band. Everything is scoped so the template stylesheet cannot reach in. */
+    .tvlab{background:#FFFFFF; padding:80px 0; color:#001F5C}
+    .tvlab__grid{display:grid; grid-template-columns:1fr; gap:44px; align-items:center}
+    @media (min-width:992px){.tvlab__grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px}}
+    .tvlab__eyebrow{font-family:"Poppins",sans-serif; font-size:.72rem; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase; color:#7784A4; margin:0 0 18px}
+    .tvlab__h{font-family:"Poppins",sans-serif; font-weight:600;
+      font-size:clamp(1.85rem,3.8vw,2.9rem); line-height:1.08; letter-spacing:-.032em;
+      color:#001F5C; margin:0 0 22px; text-wrap:balance}
+    .tvlab__p{font-family:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+      color:#46567B; font-size:1.0425rem; line-height:1.62; max-width:54ch; margin:0 0 16px}
+    .tvlab__btn{display:inline-flex; align-items:center; gap:10px; margin-top:14px;
+      background:#001F5C; color:#fff; text-decoration:none; font-family:"Instrument Sans",Arial,sans-serif;
+      font-weight:600; font-size:.9rem; padding:15px 28px; border-radius:100px;
+      border:1px solid #001F5C; transition:background-color .25s, border-color .25s}
+    .tvlab__btn:hover{background:#103A93; border-color:#103A93; color:#fff}
+    .tvlab__btn svg{flex:none; transition:transform .25s}
     .tvlab__btn:hover svg{transform:translateX(4px)}
+
+    /* the orbit diagram — one stroke system, drawn in currentColor */
+    .tvlab__art{color:#001F5C; display:flex; justify-content:center}
+    .tvlab__art .dg{width:100%; height:auto; max-width:560px; display:block;
+      font-family:"Instrument Sans","Helvetica Neue",Arial,sans-serif}
+    .tvlab__art .dg .arc{fill:none; stroke:currentColor; stroke-opacity:.38; stroke-width:1.4;
+      stroke-dasharray:1.5 7; stroke-linecap:round}
+    .tvlab__art .dg .box{fill:#F1F4FA; stroke:currentColor; stroke-opacity:.3; stroke-width:1.25}
+    .tvlab__art .dg .hub{fill:#EAF0FA; stroke:currentColor; stroke-opacity:.28; stroke-width:1.25}
+    .tvlab__art .dg .head{fill:currentColor; fill-opacity:.42}
+    .tvlab__art .dg .lbl{fill:currentColor; font-size:15.5px; font-weight:500; letter-spacing:-.005em}
+    .tvlab__art .dg .sub{fill:currentColor; fill-opacity:.6; font-size:12.5px; font-weight:400}
+
+
+    /* Closing call into the Lab — the navy constellation */
+    .tvcta{background:#001F5C; color:#fff; padding:74px 0}
+    .tvcta__grid{display:grid; grid-template-columns:1fr; gap:40px; align-items:center}
+    @media (min-width:992px){.tvcta__grid{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)}}
+    .tvcta__eyebrow{font-family:"Poppins",sans-serif; font-size:.72rem; font-weight:600;
+      letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.55); margin:0 0 16px}
+    .tvcta__h{font-family:"Poppins",sans-serif; font-weight:600; font-size:clamp(1.75rem,3.4vw,2.6rem);
+      line-height:1.1; letter-spacing:-.03em; color:#fff; margin:0 0 18px; max-width:18ch}
+    .tvcta__p{font-family:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+      color:rgba(255,255,255,.72); font-size:1rem; line-height:1.62; max-width:52ch; margin:0}
+    .tvcta__list{list-style:none; margin:22px 0 0; padding:0; display:grid; gap:10px}
+    .tvcta__list li{position:relative; padding-left:20px; color:rgba(255,255,255,.72);
+      font-family:"Instrument Sans",Arial,sans-serif; font-size:.95rem}
+    .tvcta__list li:before{content:""; position:absolute; left:0; top:.72em; width:8px; height:1px;
+      background:rgba(255,255,255,.5)}
+    .tvcta__btn{display:inline-flex; align-items:center; gap:10px; margin-top:30px;
+      background:#fff; color:#001F5C; text-decoration:none;
+      font-family:"Instrument Sans",Arial,sans-serif; font-weight:600; font-size:.9rem;
+      padding:15px 28px; border-radius:100px; border:1px solid #fff;
+      transition:background-color .25s, border-color .25s}
+    .tvcta__btn:hover{background:#D9E2F5; border-color:#D9E2F5; color:#001F5C}
+    .tvcta__btn svg{flex:none; transition:transform .25s}
+    .tvcta__btn:hover svg{transform:translateX(4px)}
+    .tvcta__art svg{width:100%; height:auto; max-width:340px; margin-inline:auto; display:block}
+
     .footer-lab{margin-top:6px}
     .footer-lab a{color:rgba(255,255,255,.7); font-size:.9rem; text-decoration:none}
     .footer-lab a:hover{color:#fff}
-    .tvlab__art svg{width:100%; height:auto; max-width:360px; margin-inline:auto; display:block}
   </style>
 
 
@@ -117,7 +156,7 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/about-navy.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
             <h3>About</h3>
@@ -149,38 +188,38 @@
         <div class="tvlab__grid">
           <div class="tvlab__copy">
             <p class="tvlab__eyebrow">Timeless Venture Lab</p>
-            <h2>Turn AI ambition into operating advantage.</h2>
-            <p>The Lab is where the work happens. We build AI fluency inside your teams,
-               and we build the intelligent systems those teams own &mdash; from discovery
-               through production, inside your own infrastructure.</p>
-            <ul class="tvlab__list">
-              <li>AI enablement and training</li>
-              <li>Intelligent systems and AI agents</li>
-              <li>Continuous delivery</li>
-            </ul>
-            <a class="tvlab__btn" href="lab.html">Learn more
+            <h2 class="tvlab__h">Close the distance between what AI can do and what your organization can use.</h2>
+            <p class="tvlab__p">Technology is not valuable because it is sophisticated. It becomes valuable
+              when it changes how an organization operates, decides, and creates value. Most stalled AI
+              programmes did not fail technically &mdash; they were well-executed answers to the wrong
+              question, or good systems nobody adopted.</p>
+            <p class="tvlab__p">The Lab is where we work at the point those two things meet: enough technical
+              depth to know what intelligent systems can genuinely do, and enough operating experience to
+              make the change hold once it lands.</p>
+            <a class="tvlab__btn" href="lab.html">Explore the Lab
               <svg width="14" height="10" viewBox="0 0 13 10" aria-hidden="true">
                 <path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/>
               </svg>
             </a>
           </div>
-          <div class="tvlab__art" aria-hidden="true">
-            <svg viewBox="0 0 300 220" role="presentation">
-              <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
-                <g stroke-opacity=".26" stroke-dasharray="1.5 8" stroke-width="1.3">
-                  <circle cx="150" cy="110" r="52"/>
-                  <circle cx="150" cy="110" r="86"/>
-                </g>
-                <g stroke-opacity=".2" stroke-width="1.3">
-                  <path d="M150 110 L64 58"/><path d="M150 110 L246 52"/>
-                  <path d="M150 110 L70 172"/><path d="M150 110 L240 178"/>
-                </g>
-              </g>
-              <g fill="#FFFFFF" fill-opacity=".4">
-                <circle cx="64" cy="58" r="4"/><circle cx="246" cy="52" r="4"/>
-                <circle cx="70" cy="172" r="4"/><circle cx="240" cy="178" r="4"/>
-              </g>
-              <image href="assets/img/logo-mark-white.png" x="122" y="88" width="56" height="45"/>
+          <div class="tvlab__art">
+            <svg class="dg" viewBox="0 -16 560 500" role="img"
+            aria-label="Diagram: operations, customer service, risk and compliance, finance, knowledge work, sales and marketing, and frontline delivery all converge on the work Timeless does.">
+            <path class="arc" d="M442 34 C 372 -8 236 -6 186 34 C 118 88 58 132 46 196
+            C 32 268 54 330 96 372 C 148 424 224 448 296 442"/>
+            <path class="arc" d="M492 156 C 506 204 486 238 428 246"/>
+            <path class="head" d="M430 240 l -14 6 l 14 6 z"/>
+            <circle class="hub" cx="330" cy="250" r="82"/>
+            <image href="assets/img/logo-mark-navy.png" x="288" y="216" width="84" height="68"
+            preserveAspectRatio="xMidYMid meet"/>
+            <text class="sub" x="330" y="356" text-anchor="middle">the work itself</text>
+            <rect class="box" x="120" y="16" width="132" height="38" rx="19"/><text class="lbl" x="186" y="40" text-anchor="middle">Operations</text>
+            <rect class="box" x="352" y="16" width="172" height="38" rx="19"/><text class="lbl" x="438" y="40" text-anchor="middle">Customer service</text>
+            <rect class="box" x="38" y="116" width="200" height="38" rx="19"/><text class="lbl" x="138" y="140" text-anchor="middle">Risk and compliance</text>
+            <rect class="box" x="424" y="116" width="112" height="38" rx="19"/><text class="lbl" x="480" y="140" text-anchor="middle">Finance</text>
+            <rect class="box" x="6" y="212" width="172" height="38" rx="19"/><text class="lbl" x="92" y="236" text-anchor="middle">Knowledge work</text>
+            <rect class="box" x="34" y="306" width="196" height="38" rx="19"/><text class="lbl" x="132" y="330" text-anchor="middle">Sales and marketing</text>
+            <rect class="box" x="196" y="424" width="178" height="38" rx="19"/><text class="lbl" x="285" y="448" text-anchor="middle">Frontline delivery</text>
             </svg>
           </div>
         </div>
@@ -510,7 +549,54 @@
 
     </section><!-- End Recent-posts Section -->
 
-     <!-- ======= Contact Section ======= -->
+ 
+    <!-- ======= Enter the Lab (closing) ======= -->
+    <section id="lab-cta" class="tvcta">
+      <div class="container" data-aos="fade-up">
+        <div class="tvcta__grid">
+          <div>
+            <p class="tvcta__eyebrow">Timeless Venture Lab</p>
+            <h2 class="tvcta__h">Turn AI ambition into operating advantage.</h2>
+            <p class="tvcta__p">We build AI fluency inside your teams, and we build the intelligent
+              systems those teams own &mdash; from discovery through production, inside your own
+              infrastructure.</p>
+            <ul class="tvcta__list">
+              <li>AI enablement and training</li>
+              <li>Intelligent systems and AI agents</li>
+              <li>Continuous delivery</li>
+            </ul>
+            <a class="tvcta__btn" href="lab.html">Enter the Lab
+              <svg width="14" height="10" viewBox="0 0 13 10" aria-hidden="true">
+                <path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg>
+            </a>
+          </div>
+          <div class="tvcta__art" aria-hidden="true">
+            <svg viewBox="0 0 300 220" role="presentation">
+              <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
+                <g stroke-opacity=".26" stroke-dasharray="1.5 8" stroke-width="1.3">
+                  <circle cx="150" cy="110" r="52"/>
+                  <circle cx="150" cy="110" r="86"/>
+                </g>
+                <g stroke-opacity=".2" stroke-width="1.3">
+                  <path d="M150 110 L64 58"/><path d="M150 110 L246 52"/>
+                  <path d="M150 110 L70 172"/><path d="M150 110 L240 178"/>
+                </g>
+              </g>
+              <g fill="#FFFFFF" fill-opacity=".4">
+                <circle cx="64" cy="58" r="4"/><circle cx="246" cy="52" r="4"/>
+                <circle cx="70" cy="172" r="4"/><circle cx="240" cy="178" r="4"/>
+              </g>
+              <image href="assets/img/logo-mark-white.png"
+                     xlink:href="assets/img/logo-mark-white.png"
+                     x="122" y="88" width="56" height="45"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Enter the Lab -->
+
+    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container" data-aos="fade-up">
 
