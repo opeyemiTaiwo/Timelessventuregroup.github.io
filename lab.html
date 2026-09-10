@@ -174,6 +174,7 @@ p{margin:0}
 @media (min-width:1180px){.hdr__nav{display:flex}}
 .hdr__nav a{font-size:.88rem; white-space:nowrap; font-weight:500; color:var(--w-mid); text-decoration:none; transition:color .2s}
 .hdr__nav a:hover{color:var(--w)}
+.hdr__nav a[aria-current="page"]{color:var(--w)}
 .hdr__cta{display:none; white-space:nowrap}
 @media (min-width:1180px){.hdr__cta{display:inline-flex}}
 
@@ -388,28 +389,7 @@ p{margin:0}
 
 /* ---------- contact ---------- */
 .contact-grid{display:grid; grid-template-columns:1fr; gap:clamp(2.2rem,5vw,4rem)}
-@media (min-width:940px){.contact-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); align-items:start}}
-.form{display:grid; gap:1.1rem}
-@media (min-width:600px){.pair{display:grid; grid-template-columns:repeat(2,1fr); gap:1.1rem}}
-.field{display:flex; flex-direction:column; gap:.45rem}
-.field label{font-size:.86rem; font-weight:500; color:var(--w-mid)}
-.field input,.field select,.field textarea{
-  font-family:var(--body); font-size:1rem; color:var(--w); background:var(--ink-raised);
-  border:1px solid var(--rule); border-radius:4px; padding:.85rem 1rem; width:100%;
-  transition:border-color .2s, background-color .2s;
-}
-.field textarea{min-height:8rem; resize:vertical; line-height:1.55}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--w); outline:none; background:var(--ink-hover)}
-.field input::placeholder,.field textarea::placeholder{color:var(--w-low)}
-.field select{
-  appearance:none;
-  background-image:linear-gradient(45deg,transparent 50%,rgba(255,255,255,.5) 50%),linear-gradient(135deg,rgba(255,255,255,.5) 50%,transparent 50%);
-  background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%;
-  background-size:5px 5px,5px 5px; background-repeat:no-repeat;
-}
-.field select option{background:var(--ink-raised); color:var(--w)}
-.form__msg{display:none; border:1px solid var(--rule-firm); background:rgba(255,255,255,.07); padding:1rem 1.15rem; font-size:.93rem; border-radius:4px}
-.form__msg[data-show="true"]{display:block}
+@media (min-width:940px){.contact-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); align-items:center}}
 
 .details{list-style:none; margin:0; padding:0}
 .details li{padding-block:1.15rem; border-top:1px solid var(--rule-soft)}
@@ -417,7 +397,7 @@ p{margin:0}
 .details .lab{display:block; font-size:.84rem; color:var(--w-low); margin-bottom:.3rem}
 .details a,.details p{font-family:var(--display); font-size:1.02rem; font-weight:500; color:var(--w); text-decoration:none; letter-spacing:-.014em}
 .details a:hover{text-decoration:underline}
-.contact-art{margin-top:1.6rem}
+.contact-art{margin-top:0}
 
 /* ---------- CTA ---------- */
 .cta{text-align:center; display:flex; flex-direction:column; align-items:center; gap:1.4rem}
@@ -463,13 +443,12 @@ p{margin:0}
       <span class="hdr__unit">Lab</span>
     </a>
     <nav class="hdr__nav" aria-label="Main">
-      <a href="#what">What we do</a>
-      <a href="#how">How we work</a>
-      <a href="#founder">Founder</a>
-      <a href="#proof">Clients</a>
-      <a href="#insights">Writing</a>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="lab.html" aria-current="page">The Lab</a>
+      <a href="index.html#writing">Writing</a>
       <a href="#contact">Contact</a>
-      <a href="index.html">Venture Group</a>
     </nav>
     <a class="btn btn--solid hdr__cta" href="#contact">Start a conversation</a>
     <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="drawer">
@@ -480,13 +459,12 @@ p{margin:0}
 
 <div class="drawer" id="drawer" data-open="false">
   <nav class="wrap drawer__nav" aria-label="Main">
-    <a href="#what">What we do</a>
-    <a href="#how">How we work</a>
-    <a href="#founder">Founder</a>
-    <a href="#proof">Clients</a>
-    <a href="#insights">Writing</a>
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="lab.html" aria-current="page">The Lab</a>
+    <a href="index.html#writing">Writing</a>
     <a href="#contact">Contact</a>
-    <a href="index.html">Venture Group</a>
     <a class="btn btn--solid" href="#contact">Start a conversation</a>
   </nav>
 </div>
@@ -872,7 +850,7 @@ p{margin:0}
   </section>
 
   <!-- ===================== NUMBERS + WHY ===================== -->
-  <section class="band paper" id="proof" style="padding-top:0">
+  <section class="band paper" id="proof">
     <div class="wrap">
       <!-- EDIT ME — replace the three "00" values with real, defensible figures.
            If a number cannot be substantiated, delete that tile rather than round up. -->
@@ -919,189 +897,33 @@ p{margin:0}
     </div>
   </section>
 
-  <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="band paper" style="padding-top:0">
-    <div class="wrap">
-      <div class="shead shead--split">
-        <div><h2 class="t-1">What partners say</h2></div>
-        <div class="rail__nav" data-nav-for="quotes">
-          <button class="rail__btn" type="button" data-prev aria-label="Previous testimonial">
-            <svg width="15" height="12" viewBox="0 0 15 12" aria-hidden="true"><path d="M6 1L1 6l5 5M1 6h13" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
-          </button>
-          <button class="rail__btn" type="button" data-next aria-label="Next testimonial">
-            <svg width="15" height="12" viewBox="0 0 15 12" aria-hidden="true"><path d="M9 1l5 5-5 5M14 6H1" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
-          </button>
-        </div>
-      </div>
 
-      <div class="rail" data-rail="quotes">
-        <div class="rail__track" data-track tabindex="0" role="group" aria-label="Client testimonials">
-          <div class="rail__item">
-            <figure class="quote">
-              <blockquote>Timeless Venture Group's commitment to blurring the lines between disciplines does not only encourage creativity, it leads to groundbreaking solutions. For institutions and workplaces looking to embrace interdisciplinary collaboration, they are a trailblazer worth partnering with.</blockquote>
-              <figcaption class="quote__who">
-                <img src="assets/img/v-seun.webp" alt="" loading="lazy" width="46" height="46">
-                <span>
-                  <span class="quote__name">Seun Olatunji</span>
-                  <span class="quote__role">Creative Team Lead</span>
-                </span>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="rail__item">
-            <figure class="quote">
-              <blockquote>The blockchain development team played a crucial role in our sustainable development project. The solutions provided were of immense value to our operations, and I anticipate future collaborations.</blockquote>
-              <figcaption class="quote__who">
-                <img class="is-logo" src="assets/img/client-liberation.webp" alt="" loading="lazy" width="46" height="46">
-                <span>
-                  <span class="quote__name">Liberation in AI Consulting</span>
-                  <span class="quote__role">Founder</span>
-                </span>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="rail__item">
-            <figure class="quote">
-              <blockquote>With AI as the future, I firmly believe in Timeless Venture Group's ability to guide organizations towards their AI and automation objectives. Trustworthy and forward-thinking — the partner you need to navigate this landscape.</blockquote>
-              <figcaption class="quote__who">
-                <img src="assets/img/v-cynthia.webp" alt="" loading="lazy" width="46" height="46">
-                <span>
-                  <span class="quote__name">Cynthia Nosiri</span>
-                  <span class="quote__role">AI Researcher</span>
-                </span>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="rail__item">
-            <figure class="quote">
-              <blockquote>Working with the team feels like having true partners who are invested in one another's success. I could not be happier with our results.</blockquote>
-              <figcaption class="quote__who">
-                <img src="assets/img/v-akintunde.webp" alt="" loading="lazy" width="46" height="46">
-                <span>
-                  <span class="quote__name">Akintunde Opaleye</span>
-                  <span class="quote__role">CEO, ThinkNodes</span>
-                </span>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="rail__item">
-            <figure class="quote">
-              <blockquote>Timeless Venture Group provides exceptional AI, ML and blockchain services, establishing themselves as a trusted partner rather than merely a technology provider.</blockquote>
-              <figcaption class="quote__who">
-                <img src="assets/img/v-yomi.webp" alt="" loading="lazy" width="46" height="46">
-                <span>
-                  <span class="quote__name">Yomi Aderibigbe</span>
-                  <span class="quote__role">Founder, Megalf Global Network</span>
-                </span>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== WRITING ===================== -->
-  <section class="band" id="insights">
-    <div class="wrap">
-      <div class="shead">
-        <h2 class="t-1">Writing</h2>
-        <p class="copy head-copy">Perspectives on where AI is genuinely changing how organizations operate — written for the people who have to make the call.</p>
-      </div>
-
-      <div class="grid grid--3">
-        <a class="post" href="https://medium.com/@temitopeajibola7/ai-in-healthcare-a-symphony-of-empathy-innovation-and-infinite-possibilities-03b1ea86a6bb" target="_blank" rel="noopener">
-          <div class="post__img"><img src="assets/img/ai-1.webp" alt="" loading="lazy"></div>
-          <div class="post__body">
-            <h3 class="post__title">AI in healthcare: empathy, innovation, and infinite possibilities</h3>
-            <p class="post__meta"><img src="assets/img/author.webp" alt="" loading="lazy" width="30" height="30"> Temitope Ajibola · 27 December 2023</p>
-          </div>
-        </a>
-        <a class="post" href="https://medium.com/@temitopeajibola7/empowering-underserved-communities-fintechs-new-era-with-ai-blockchain-and-open-banking-2f6745ec61ee" target="_blank" rel="noopener">
-          <div class="post__img"><img src="assets/img/ai-2.jpeg" alt="" loading="lazy"></div>
-          <div class="post__body">
-            <h3 class="post__title">Empowering underserved communities: fintech's new era with AI, blockchain and open banking</h3>
-            <p class="post__meta"><img src="assets/img/author.webp" alt="" loading="lazy" width="30" height="30"> Temitope Ajibola · 25 December 2023</p>
-          </div>
-        </a>
-        <a class="post" href="https://medium.com/@temitopeajibola7/charting-new-horizons-a-deep-dive-into-ai-global-talent-mobility-and-venture-capital-for-dec7f338a52c" target="_blank" rel="noopener">
-          <div class="post__img"><img src="assets/img/ai-3.webp" alt="" loading="lazy"></div>
-          <div class="post__body">
-            <h3 class="post__title">Charting new horizons: AI, global talent mobility, and venture capital for marginalized communities</h3>
-            <p class="post__meta"><img src="assets/img/author.webp" alt="" loading="lazy" width="30" height="30"> Temitope Ajibola · 19 December 2023</p>
-          </div>
-        </a>
-      </div>
-
-      <p style="margin-top:2.2rem"><a class="tlink" href="https://medium.com/@temitopeajibola7" target="_blank" rel="noopener">Read everything on Medium</a></p>
-    </div>
-  </section>
 
   <!-- ===================== CONTACT ===================== -->
   <section class="band" id="contact" style="background:var(--ink-deep)">
     <div class="wrap">
       <div class="shead">
         <h2 class="t-1">Start a conversation</h2>
-        <p class="copy head-copy">Tell us what you are trying to change. If we are not the right people for it, we will say so and point you toward someone who is.</p>
+        <p class="copy head-copy">Tell us what you are trying to change. Write to us directly and a person reads it &mdash; if we are not the right people for the work, we will say so and point you toward someone who is.</p>
+        <p style="margin-top:1.8rem"><a class="btn btn--solid" href="mailto:contact@timelessventuregroup.com">Email us</a></p>
       </div>
 
       <div class="contact-grid">
-        <form class="form" data-form data-endpoint="" data-mailto="contact@timelessventuregroup.com">
-          <div class="pair">
-            <div class="field">
-              <label for="f-name">Name</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Your full name">
-            </div>
-            <div class="field">
-              <label for="f-org">Organization</label>
-              <input id="f-org" name="organization" type="text" autocomplete="organization" required placeholder="Company or institution">
-            </div>
-          </div>
-          <div class="pair">
-            <div class="field">
-              <label for="f-role">Role</label>
-              <input id="f-role" name="role" type="text" autocomplete="organization-title" placeholder="Your title">
-            </div>
-            <div class="field">
-              <label for="f-email">Work email</label>
-              <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="name@company.com">
-            </div>
-          </div>
-          <div class="field">
-            <label for="f-msg">What are you working on?</label>
-            <textarea id="f-msg" name="message" required placeholder="The decision, process, or question in front of you."></textarea>
-          </div>
-          <div class="field">
-            <label for="f-src">How did you find us?</label>
-            <select id="f-src" name="source">
-              <option value="">Select one</option>
-              <option>Search</option>
-              <option>LinkedIn</option>
-              <option>Referral</option>
-              <option>An article or talk</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div><button class="btn btn--solid" type="submit">Send message</button></div>
-          <p class="form__msg" data-form-msg role="status"></p>
-        </form>
-
-        <div>
-          <ul class="details">
-            <li>
-              <span class="lab">Email</span>
+        <ul class="details">
+          <li>
+            <span class="lab">Email</span>
               <a href="mailto:contact@timelessventuregroup.com">contact@timelessventuregroup.com</a>
             </li>
-            <li>
-              <span class="lab">Phone</span>
+          <li>
+            <span class="lab">Phone</span>
               <a href="tel:+16673548802">+1 (667) 354-8802</a>
             </li>
-            <li>
-              <span class="lab">Office</span>
+          <li>
+            <span class="lab">Office</span>
               <p>7500 Old Harford Road<br>Baltimore, MD 21234</p>
             </li>
-            <li>
-              <span class="lab">Elsewhere</span>
+          <li>
+            <span class="lab">Elsewhere</span>
               <p class="social">
                 <a href="https://www.linkedin.com/company/timeless-venture-group-llc/" target="_blank" rel="noopener">LinkedIn</a>
                 <a href="https://twitter.com/timeless_vg" target="_blank" rel="noopener">X</a>
@@ -1109,8 +931,8 @@ p{margin:0}
                 <a href="https://medium.com/@temitopeajibola7" target="_blank" rel="noopener">Medium</a>
               </p>
             </li>
-          </ul>
-          <div class="dgwrap path__dg contact-art">
+        </ul>
+        <div class="dgwrap path__dg contact-art">
             <svg class="dg" viewBox="0 0 424 128" role="img"
                  aria-label="Diagram: a first conversation leads either to an assessment or straight to a build, and both lead to a decision you can fund.">
               <rect class="key" x="4" y="44" width="104" height="40" rx="8"/>
@@ -1126,8 +948,7 @@ p{margin:0}
               <path class="head" d="M298 58 l 12 6 l -12 6 z"/>
               <text class="sub" x="318" y="60">a call</text>
               <text class="sub" x="318" y="74">you can fund</text>
-            </svg>
-          </div>
+          </svg>
         </div>
       </div>
     </div>
@@ -1170,8 +991,7 @@ p{margin:0}
         <ul class="ftr__menu">
           <li><a href="index.html">Timeless Venture Group</a></li>
           <li><a href="#founder">Founder</a></li>
-          <li><a href="#proof">Clients and partners</a></li>
-          <li><a href="#insights">Writing</a></li>
+          <li><a href="#proof">Why Timeless</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -1247,27 +1067,6 @@ p{margin:0}
     sync();
   });
 
-  /* GitHub Pages cannot run forms/contact.php — that form never worked.
-     Put a real endpoint (Formspree, Basin, Netlify Forms) in data-endpoint
-     and submissions POST there. Until then it composes an email. */
-  document.addEventListener("submit", function(e){
-    var form = e.target.closest("form[data-form]");
-    if(!form) return;
-    if(form.getAttribute("data-endpoint")) return;
-    e.preventDefault();
-    if(!form.reportValidity()) return;
-    var d = new FormData(form);
-    var to = form.getAttribute("data-mailto");
-    var subject = "Enquiry from " + (d.get("name") || "") + (d.get("organization") ? " — " + d.get("organization") : "");
-    var lines = [];
-    d.forEach(function(v,k){ if(v) lines.push(k.charAt(0).toUpperCase() + k.slice(1) + ": " + v); });
-    var msg = form.querySelector("[data-form-msg]");
-    if(msg){
-      msg.setAttribute("data-show","true");
-      msg.textContent = "Your email app is opening with these details. Send the message and we will reply personally. If nothing opened, write to " + to + ".";
-    }
-    window.location.href = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n\n"));
-  });
 })();
 </script>
 </body>

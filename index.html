@@ -96,6 +96,66 @@
     .tvcta__btn:hover svg{transform:translateX(4px)}
     .tvcta__art svg{width:100%; height:auto; max-width:340px; margin-inline:auto; display:block}
 
+
+    /* ---- Writing (navy) ---- */
+    .tvw{background:#001F5C; color:#fff; padding:76px 0}
+    .tvw__h{font-family:"Poppins",sans-serif; font-weight:600; font-size:clamp(1.9rem,3.6vw,2.8rem);
+      letter-spacing:-.032em; line-height:1.08; color:#fff; margin:0 0 16px}
+    .tvw__lede{font-family:"Instrument Sans",Arial,sans-serif; color:rgba(255,255,255,.7);
+      font-size:1.05rem; line-height:1.6; max-width:56ch; margin:0 0 40px}
+    .tvw__grid{display:grid; grid-template-columns:1fr; gap:18px}
+    @media (min-width:768px){.tvw__grid{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:1100px){.tvw__grid{grid-template-columns:repeat(3,1fr)}}
+    .tvw__post{display:flex; flex-direction:column; height:100%; text-decoration:none;
+      background:#0A2E7A; border:1px solid rgba(255,255,255,.07); border-radius:5px;
+      overflow:hidden; transition:border-color .25s}
+    .tvw__post:hover{border-color:rgba(255,255,255,.3)}
+    .tvw__img{display:block; aspect-ratio:16/10; overflow:hidden; background:#00133A;
+      border-bottom:1px solid rgba(255,255,255,.07)}
+    .tvw__img img{width:100%; height:100%; object-fit:cover; display:block}
+    .tvw__body{display:flex; flex-direction:column; gap:14px; padding:22px; flex:1}
+    .tvw__title{font-family:"Poppins",sans-serif; font-weight:600; font-size:1.03rem;
+      line-height:1.32; letter-spacing:-.018em; color:#fff}
+    .tvw__meta{margin-top:auto; display:flex; align-items:center; gap:10px;
+      font-family:"Instrument Sans",Arial,sans-serif; font-size:.85rem; color:rgba(255,255,255,.47)}
+    .tvw__meta img{width:30px; height:30px; border-radius:50%; object-fit:cover; flex:none}
+    .tvw__more{margin:34px 0 0}
+    .tvw__more a{font-family:"Instrument Sans",Arial,sans-serif; font-weight:600; font-size:.88rem;
+      color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.3);
+      padding-bottom:3px; transition:border-color .25s}
+    .tvw__more a:hover{border-color:#fff; color:#fff}
+
+    /* ---- What partners say (white) ---- */
+    .tvq{background:#fff; padding:76px 0}
+    .tvq__head{display:flex; align-items:flex-end; justify-content:space-between;
+      gap:24px; flex-wrap:wrap; margin-bottom:36px}
+    .tvq__h{font-family:"Poppins",sans-serif; font-weight:600; font-size:clamp(1.9rem,3.6vw,2.8rem);
+      letter-spacing:-.032em; line-height:1.08; color:#001F5C; margin:0}
+    .tvq__nav{display:flex; gap:9px; flex:none}
+    .tvq__btn{width:44px; height:44px; border-radius:50%; border:1px solid rgba(0,31,92,.14);
+      background:transparent; color:#001F5C; display:grid; place-items:center; cursor:pointer;
+      transition:background-color .2s, border-color .2s, opacity .2s}
+    .tvq__btn:hover:not(:disabled){background:rgba(0,31,92,.06); border-color:#001F5C}
+    .tvq__btn:disabled{opacity:.3; cursor:default}
+    .tvq__track{display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory;
+      scrollbar-width:none; -ms-overflow-style:none; padding-bottom:4px}
+    .tvq__track::-webkit-scrollbar{display:none}
+    .tvq__item{scroll-snap-align:start; flex:0 0 min(86vw,25rem)}
+    @media (min-width:820px){.tvq__item{flex-basis:calc((100% - 18px)/2)}}
+    @media (min-width:1140px){.tvq__item{flex-basis:calc((100% - 36px)/3)}}
+    .tvq__card{margin:0; height:100%; display:flex; flex-direction:column; gap:22px;
+      background:#F1F4FA; border:1px solid rgba(0,31,92,.14); border-radius:5px; padding:30px}
+    .tvq__card blockquote{margin:0; font-family:"Instrument Sans",Arial,sans-serif;
+      font-size:.98rem; line-height:1.6; color:#46567B}
+    .tvq__who{display:flex; align-items:center; gap:14px; margin-top:auto}
+    .tvq__who img{width:46px; height:46px; border-radius:50%; object-fit:cover; flex:none; background:#fff}
+    .tvq__who img.tvq__logo{border-radius:4px; object-fit:contain; padding:3px; border:1px solid rgba(0,31,92,.14)}
+    .tvq__name{display:block; font-family:"Poppins",sans-serif; font-weight:600; font-size:.95rem;
+      color:#001F5C; letter-spacing:-.012em}
+    .tvq__role{display:block; font-family:"Instrument Sans",Arial,sans-serif; font-size:.83rem; color:#7784A4}
+
+    .contact .info-box p a{color:inherit; text-decoration:none; border-bottom:1px solid rgba(0,31,92,.25)}
+    .contact .info-box p a:hover{border-color:#001F5C}
     .footer-lab{margin-top:6px}
     .footer-lab a{color:rgba(255,255,255,.7); font-size:.9rem; text-decoration:none}
     .footer-lab a:hover{color:#fff}
@@ -120,9 +180,9 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link" href="lab.html">The Lab</a></li>
-          <li><a class="nav-link scrollto" href="#recent-posts">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#writing">Writing</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+          <li><a class="getstarted scrollto" href="#contact">Start a conversation</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -338,90 +398,38 @@
     <!-- End Clients Section -->
 
      <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
+    <!-- ======= Writing ======= -->
+    <section id="writing" class="tvw">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Clients and Partners</h2>
-          <p>
-            Timeless Venture Group LLC is proud to collaborate with industry leaders in AI, ML, and Blockchain. Together, we shape the future of technological advancements.
-          </p>
+        <h2 class="tvw__h">Writing</h2>
+        <p class="tvw__lede">Perspectives on where AI is genuinely changing how organizations
+          operate &mdash; written for the people who have to make the call.</p>
+        <div class="tvw__grid">
+          <a class="tvw__post" href="https://medium.com/@temitopeajibola7/ai-in-healthcare-a-symphony-of-empathy-innovation-and-infinite-possibilities-03b1ea86a6bb" target="_blank" rel="noopener">
+            <span class="tvw__img"><img src="assets/img/ai-1.webp" alt="" loading="lazy"></span>
+            <span class="tvw__body">
+              <span class="tvw__title">AI in healthcare: empathy, innovation, and infinite possibilities</span>
+              <span class="tvw__meta"><img src="assets/img/author.webp" alt="" loading="lazy" width="30" height="30"> Temitope Ajibola &middot; 27 December 2023</span>
+            </span>
+          </a>
+          <a class="tvw__post" href="https://medium.com/@temitopeajibola7/empowering-underserved-communities-fintechs-new-era-with-ai-blockchain-and-open-banking-2f6745ec61ee" target="_blank" rel="noopener">
+            <span class="tvw__img"><img src="assets/img/ai-2.jpeg" alt="" loading="lazy"></span>
+            <span class="tvw__body">
+              <span class="tvw__title">Empowering underserved communities: fintech's new era with AI, blockchain and open banking</span>
+              <span class="tvw__meta"><img src="assets/img/author.webp" alt="" loading="lazy" width="30" height="30"> Temitope Ajibola &middot; 25 December 2023</span>
+            </span>
+          </a>
+          <a class="tvw__post" href="https://medium.com/@temitopeajibola7/charting-new-horizons-a-deep-dive-into-ai-global-talent-mobility-and-venture-capital-for-dec7f338a52c" target="_blank" rel="noopener">
+            <span class="tvw__img"><img src="assets/img/ai-3.webp" alt="" loading="lazy"></span>
+            <span class="tvw__body">
+              <span class="tvw__title">Charting new horizons: AI, global talent mobility, and venture capital for marginalized communities</span>
+              <span class="tvw__meta"><img src="assets/img/author.webp" alt="" loading="lazy" width="30" height="30"> Temitope Ajibola &middot; 19 December 2023</span>
+            </span>
+          </a>
         </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-             Timeless Venture Group commitment to blurring the lines between disciplines not only encourages creativity but also leads to groundbreaking solutions. For academic institutions and workplaces seeking to embrace interdisciplinary collaboration and drive innovation forward, Timeless Venture Group is undoubtedly a trailblazer worth partnering with.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/seun.jpeg" class="testimonial-img" alt="">
-                <h3>Seun Olatunji</h3>
-                <h4>Creative Team Lead</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-            The blockchain development team at Timeless Venture Group played a crucial role in the development of our sustainable development project. The solutions provided were of immense value to our operations. I eagerly anticipate future collaborations with this company.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/tm5.jpeg" class="testimonial-img" alt="">
-                <h3>Liberation in AI Consulting</h3>
-                <h4>Founder</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-         With AI as the future, I firmly believe in Timeless Venture Group’s ability to guide organizations towards their AI and automation objectives. Trustworthy and forward-thinking, Timeless Venture Group is the partner you need to navigate the transformative landscape of AI seamlessly.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/tm3.jpeg" class="testimonial-img" alt="">
-                <h3>Cynthia Nosiri</h3>
-                <h4>AI researcher</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-            Working with the team at Timeless Venture Group feels like having true partners who are invested in one another's success. I couldn't be happier with our results!
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/tm4.jpeg" class="testimonial-img" alt="">
-                <h3>Akintunde Opaleye</h3>
-                <h4>CEO, ThinkNodes</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-         Timeless Venture Group provides exceptional AI, ML and Blockchain services, establishing themselves as a trusted partner beyond mere technology providers.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/tm2.jpeg" class="testimonial-img" alt="">
-                <h3>Yomi Aderibigbe </h3>
-                <h4>Founder, Megalf Global Network</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
+        <p class="tvw__more"><a href="https://medium.com/@temitopeajibola7" target="_blank" rel="noopener">Read everything on Medium</a></p>
       </div>
-    </section><!-- End Testimonials Section -->
+    </section><!-- End Writing -->
 
 
     <!-- Team Section - Home Page -->
@@ -457,97 +465,84 @@
     
 
     <!-- Recent-posts Section - Home Page -->
-    <section id="recent-posts" class="recent-posts">
-
-      <!--  Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Stay Informed</h2>
-        <p>
-          Explore our blog for the latest insights, trends, and news in the world of AI, ML, and Blockchain. Stay ahead of the curve with our expert analysis and thought leadership.
-        </p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/ai-1.png" alt="" class="img-fluid">
-              </div>
-
-              <h3 class="title">
-                <a href="https://medium.com/@temitopeajibola7/ai-in-healthcare-a-symphony-of-empathy-innovation-and-infinite-possibilities-03b1ea86a6bb">AI in Healthcare: A Symphony of Empathy, Innovation, and Infinite Possibilities</a>
-              </h3>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/tm30.jpeg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Temitope Ajibola</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Dec 27, 2023</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/ai-2.jpeg" alt="" class="img-fluid">
-              </div>
-
-              <h3 class="title">
-                <a href="https://medium.com/@temitopeajibola7/empowering-underserved-communities-fintechs-new-era-with-ai-blockchain-and-open-banking-2f6745ec61ee">Empowering Underserved Communities: Fintech’s New Era with AI, Blockchain, and Open Banking</a>
-              </h3>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/tm30.jpeg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Temitope Ajibola</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Dec 25, 2023</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/ai-3.webp" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="title">
-                <a href="https://medium.com/@temitopeajibola7/charting-new-horizons-a-deep-dive-into-ai-global-talent-mobility-and-venture-capital-for-dec7f338a52c">Charting New Horizons: A Deep Dive into AI, Global Talent Mobility, and Venture Capital for Marginalized Communities</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/tm30.jpeg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Temitope Ajibola</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Dec 19, 2023</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-        </div><!-- End recent posts list -->
-
+    <!-- ======= What partners say ======= -->
+    <section id="partners" class="tvq">
+      <div class="container" data-aos="fade-up">
+        <div class="tvq__head">
+          <h2 class="tvq__h">What partners say</h2>
+          <div class="tvq__nav">
+            <button class="tvq__btn" type="button" data-tvq-prev aria-label="Previous testimonial">
+              <svg width="15" height="12" viewBox="0 0 15 12" aria-hidden="true"><path d="M6 1L1 6l5 5M1 6h13" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            </button>
+            <button class="tvq__btn" type="button" data-tvq-next aria-label="Next testimonial">
+              <svg width="15" height="12" viewBox="0 0 15 12" aria-hidden="true"><path d="M9 1l5 5-5 5M14 6H1" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="tvq__track" data-tvq-track tabindex="0" role="group" aria-label="Partner testimonials">
+          <div class="tvq__item">
+            <figure class="tvq__card">
+              <blockquote>Timeless Venture Group's commitment to blurring the lines between disciplines does not only encourage creativity, it leads to groundbreaking solutions. For institutions and workplaces looking to embrace interdisciplinary collaboration, they are a trailblazer worth partnering with.</blockquote>
+              <figcaption class="tvq__who">
+                <img class="" src="assets/img/v-seun.webp" alt="" loading="lazy" width="46" height="46">
+                <span>
+                  <span class="tvq__name">Seun Olatunji</span>
+                  <span class="tvq__role">Creative Team Lead</span>
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="tvq__item">
+            <figure class="tvq__card">
+              <blockquote>The blockchain development team played a crucial role in our sustainable development project. The solutions provided were of immense value to our operations, and I anticipate future collaborations.</blockquote>
+              <figcaption class="tvq__who">
+                <img class="tvq__logo" src="assets/img/client-liberation.webp" alt="" loading="lazy" width="46" height="46">
+                <span>
+                  <span class="tvq__name">Liberation in AI Consulting</span>
+                  <span class="tvq__role">Founder</span>
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="tvq__item">
+            <figure class="tvq__card">
+              <blockquote>With AI as the future, I firmly believe in Timeless Venture Group's ability to guide organizations towards their AI and automation objectives. Trustworthy and forward-thinking &mdash; the partner you need to navigate this landscape.</blockquote>
+              <figcaption class="tvq__who">
+                <img class="" src="assets/img/v-cynthia.webp" alt="" loading="lazy" width="46" height="46">
+                <span>
+                  <span class="tvq__name">Cynthia Nosiri</span>
+                  <span class="tvq__role">AI Researcher</span>
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="tvq__item">
+            <figure class="tvq__card">
+              <blockquote>Working with the team feels like having true partners who are invested in one another's success. I could not be happier with our results.</blockquote>
+              <figcaption class="tvq__who">
+                <img class="" src="assets/img/v-akintunde.webp" alt="" loading="lazy" width="46" height="46">
+                <span>
+                  <span class="tvq__name">Akintunde Opaleye</span>
+                  <span class="tvq__role">CEO, ThinkNodes</span>
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="tvq__item">
+            <figure class="tvq__card">
+              <blockquote>Timeless Venture Group provides exceptional AI, ML and blockchain services, establishing themselves as a trusted partner rather than merely a technology provider.</blockquote>
+              <figcaption class="tvq__who">
+                <img class="" src="assets/img/v-yomi.webp" alt="" loading="lazy" width="46" height="46">
+                <span>
+                  <span class="tvq__name">Yomi Aderibigbe</span>
+                  <span class="tvq__role">Founder, Megalf Global Network</span>
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
-
-    </section><!-- End Recent-posts Section -->
+    </section><!-- End What partners say -->
 
  
     <!-- ======= Enter the Lab (closing) ======= -->
@@ -620,7 +615,7 @@
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
-              <p>contact@timelessventuregroup.com</p>
+              <p><a href="mailto:contact@timelessventuregroup.com">contact@timelessventuregroup.com</a></p>
             </div>
           </div>
 
@@ -673,10 +668,37 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Partner-quote rail -->
+  <script>
+  (function(){
+    var track = document.querySelector('[data-tvq-track]');
+    if(!track) return;
+    var prev = document.querySelector('[data-tvq-prev]');
+    var next = document.querySelector('[data-tvq-next]');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var items = Array.prototype.slice.call(track.children);
+    function step(){
+      if(items.length < 2) return track.clientWidth;
+      return Math.max(1, items[1].offsetLeft - items[0].offsetLeft);
+    }
+    function sync(){
+      var max = track.scrollWidth - track.clientWidth;
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max - 2;
+      prev.parentNode.style.display = (max <= 2) ? 'none' : 'flex';
+    }
+    prev.addEventListener('click', function(){ track.scrollBy({left:-step(), behavior: reduce?'auto':'smooth'}); });
+    next.addEventListener('click', function(){ track.scrollBy({left: step(), behavior: reduce?'auto':'smooth'}); });
+    track.addEventListener('scroll', function(){ clearTimeout(track._t); track._t = setTimeout(sync, 60); });
+    window.addEventListener('resize', function(){ clearTimeout(track._r); track._r = setTimeout(sync, 150); });
+    sync();
+  })();
+  </script>
+
 
 </body>
 
