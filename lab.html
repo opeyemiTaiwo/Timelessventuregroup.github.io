@@ -170,27 +170,27 @@ p{margin:0}
 .hdr__logo img{width:186px; height:auto}
 @media (max-width:560px){.hdr__in{height:66px} .hdr__logo img{width:146px}}
 
-.hdr__nav{display:none; align-items:center; gap:1.55rem}
-@media (min-width:1180px){.hdr__nav{display:flex}}
-.hdr__nav a{font-size:.88rem; white-space:nowrap; font-weight:500; color:var(--w-mid); text-decoration:none; transition:color .2s}
+.hdr__nav{display:none; align-items:center; gap:1.3rem}
+@media (min-width:1280px){.hdr__nav{display:flex}}
+.hdr__nav a{font-size:.855rem; white-space:nowrap; font-weight:500; color:var(--w-mid); text-decoration:none; transition:color .2s}
 .hdr__nav a:hover{color:var(--w)}
 .hdr__nav a[aria-current="page"]{color:var(--w)}
 .hdr__cta{display:none; white-space:nowrap}
-@media (min-width:1180px){.hdr__cta{display:inline-flex}}
+@media (min-width:1280px){.hdr__cta{display:inline-flex}}
 
 .burger{
   display:inline-flex; align-items:center; gap:.55rem; background:none; cursor:pointer;
   border:1px solid var(--rule-firm); border-radius:100px; color:var(--w);
   font-family:var(--body); font-size:.8rem; font-weight:600; padding:.6rem 1rem; flex:none;
 }
-@media (min-width:1180px){.burger{display:none}}
+@media (min-width:1280px){.burger{display:none}}
 .burger i{display:block; width:15px; height:1px; background:currentColor; position:relative}
 .burger i::before,.burger i::after{content:""; position:absolute; left:0; width:15px; height:1px; background:currentColor}
 .burger i::before{top:-5px}.burger i::after{top:5px}
 
 .drawer{display:none; background:var(--ink-deep); border-bottom:1px solid var(--rule-soft)}
 .drawer[data-open="true"]{display:block}
-@media (min-width:1180px){.drawer{display:none !important}}
+@media (min-width:1280px){.drawer{display:none !important}}
 .drawer__nav{display:flex; flex-direction:column; padding-block:.75rem 2rem}
 .drawer__nav a{
   text-decoration:none; color:var(--w); font-family:var(--display); font-size:1.25rem;
@@ -444,11 +444,12 @@ p{margin:0}
     </a>
     <nav class="hdr__nav" aria-label="Main">
       <a href="index.html">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#services">Services</a>
-      <a href="lab.html" aria-current="page">The Lab</a>
-      <a href="index.html#writing">Writing</a>
+      <a href="#what">What we do</a>
+      <a href="#how">How we work</a>
+      <a href="#founder">Founder</a>
+      <a href="#proof">Why us</a>
       <a href="#contact">Contact</a>
+      <a href="lab.html" aria-current="page">The Lab</a>
     </nav>
     <a class="btn btn--solid hdr__cta" href="#contact">Start a conversation</a>
     <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="drawer">
@@ -460,11 +461,12 @@ p{margin:0}
 <div class="drawer" id="drawer" data-open="false">
   <nav class="wrap drawer__nav" aria-label="Main">
     <a href="index.html">Home</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#services">Services</a>
-    <a href="lab.html" aria-current="page">The Lab</a>
-    <a href="index.html#writing">Writing</a>
+    <a href="#what">What we do</a>
+    <a href="#how">How we work</a>
+    <a href="#founder">Founder</a>
+    <a href="#proof">Why us</a>
     <a href="#contact">Contact</a>
+    <a href="lab.html" aria-current="page">The Lab</a>
     <a class="btn btn--solid" href="#contact">Start a conversation</a>
   </nav>
 </div>
