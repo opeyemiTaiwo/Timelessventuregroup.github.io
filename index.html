@@ -42,7 +42,9 @@
     /* The Lab band. Everything is scoped so the template stylesheet cannot reach in. */
     .tvlab{background:#FFFFFF; padding:80px 0; color:#001F5C}
     .tvlab__grid{display:grid; grid-template-columns:1fr; gap:44px; align-items:center}
-    @media (min-width:992px){.tvlab__grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px}}
+    @media (min-width:992px){.tvlab__grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px}
+      /* diagram left, copy right — source order stays copy-first so it leads on mobile */
+      .tvlab__art{order:1} .tvlab__copy{order:2}}
     .tvlab__eyebrow{font-family:"Poppins",sans-serif; font-size:.72rem; font-weight:600;
       letter-spacing:.2em; text-transform:uppercase; color:#7784A4; margin:0 0 18px}
     .tvlab__h{font-family:"Poppins",sans-serif; font-weight:600;
@@ -113,12 +115,9 @@
     .tvw__img{display:block; aspect-ratio:16/10; overflow:hidden; background:#00133A;
       border-bottom:1px solid rgba(255,255,255,.07)}
     .tvw__img img{width:100%; height:100%; object-fit:cover; display:block}
-    .tvw__body{display:flex; flex-direction:column; gap:14px; padding:22px; flex:1}
+    .tvw__body{display:flex; flex-direction:column; padding:22px; flex:1}
     .tvw__title{font-family:"Poppins",sans-serif; font-weight:600; font-size:1.03rem;
       line-height:1.32; letter-spacing:-.018em; color:#fff}
-    .tvw__meta{margin-top:auto; display:flex; align-items:center; gap:10px;
-      font-family:"Instrument Sans",Arial,sans-serif; font-size:.85rem; color:rgba(255,255,255,.47)}
-    .tvw__meta img{width:30px; height:30px; border-radius:50%; object-fit:cover; flex:none}
     .tvw__more{margin:34px 0 0}
     .tvw__more a{font-family:"Instrument Sans",Arial,sans-serif; font-weight:600; font-size:.88rem;
       color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.3);
@@ -409,21 +408,18 @@
             <span class="tvw__img"><img src="assets/img/ai-1.webp" alt="" loading="lazy"></span>
             <span class="tvw__body">
               <span class="tvw__title">AI in healthcare: empathy, innovation, and infinite possibilities</span>
-              <span class="tvw__meta"><img src="assets/img/author.webp" alt="" loading="lazy" width="30" height="30"> Temitope Ajibola &middot; 27 December 2023</span>
             </span>
           </a>
           <a class="tvw__post" href="https://medium.com/@temitopeajibola7/empowering-underserved-communities-fintechs-new-era-with-ai-blockchain-and-open-banking-2f6745ec61ee" target="_blank" rel="noopener">
             <span class="tvw__img"><img src="assets/img/ai-2.jpeg" alt="" loading="lazy"></span>
             <span class="tvw__body">
               <span class="tvw__title">Empowering underserved communities: fintech's new era with AI, blockchain and open banking</span>
-              <span class="tvw__meta"><img src="assets/img/author.webp" alt="" loading="lazy" width="30" height="30"> Temitope Ajibola &middot; 25 December 2023</span>
             </span>
           </a>
           <a class="tvw__post" href="https://medium.com/@temitopeajibola7/charting-new-horizons-a-deep-dive-into-ai-global-talent-mobility-and-venture-capital-for-dec7f338a52c" target="_blank" rel="noopener">
             <span class="tvw__img"><img src="assets/img/ai-3.webp" alt="" loading="lazy"></span>
             <span class="tvw__body">
               <span class="tvw__title">Charting new horizons: AI, global talent mobility, and venture capital for marginalized communities</span>
-              <span class="tvw__meta"><img src="assets/img/author.webp" alt="" loading="lazy" width="30" height="30"> Temitope Ajibola &middot; 19 December 2023</span>
             </span>
           </a>
         </div>
