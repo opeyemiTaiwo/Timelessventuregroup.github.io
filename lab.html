@@ -3,57 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Timeless Venture Lab — AI enablement and intelligent systems</title>
-<meta name="description" content="Timeless Venture Group helps organizations move from AI curiosity to AI capability — building team fluency and deploying intelligent systems that run in production, not in a pilot.">
-
+<title>Timeless Labs</title>
+<meta name="description" content="Timeless Labs is an AI and business transformation firm. We help organizations turn AI ambition into operating advantage — from strategy through implementation.">
 <link rel="icon" href="assets/img/TGV 1.png">
 <link rel="apple-touch-icon" href="assets/img/TGV 1.png">
-
-<meta property="og:title" content="Timeless Venture Lab">
-<meta property="og:description" content="AI enablement and intelligent systems for organizations that need them to work in production.">
-<meta property="og:image" content="assets/img/logo-lockup-navy.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://timelessventuregroup.com/lab.html">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
-/* ==========================================================================
-   TIMELESS VENTURE GROUP
-   Two-tone identity built from the logo artwork (#001F5C).
-   Stock illustration is duotoned to the brand navy so mixed source imagery
-   reads as one palette; photographs of people stay in full colour.
-   Self-contained — no Bootstrap, AOS, Swiper, Boxicons or jQuery.
-   ========================================================================== */
+/* ============================================================
+   TIMELESS — deep navy & white
+   Two-colour identity. No accent hue: emphasis comes from
+   inversion (navy ground / white ground) and weight.
+   Single committed visual world; every colour painted explicitly.
+   ============================================================ */
 :root{
-  --ink:        #001F5C;
-  --ink-deep:   #00133A;
-  --ink-raised: #0A2E7A;
-  --ink-hover:  #103A93;
+  --navy:        #0B1533;
+  --navy-deep:   #060D22;
+  --navy-raised: #12204A;
+  --navy-soft:   #1A2B5E;
 
-  --rule:       rgba(255,255,255,.13);
-  --rule-soft:  rgba(255,255,255,.07);
-  --rule-firm:  rgba(255,255,255,.30);
+  --line:      rgba(255,255,255,.14);
+  --line-soft: rgba(255,255,255,.07);
+  --line-firm: rgba(255,255,255,.30);
 
-  --w:      #FFFFFF;
-  --w-mid:  rgba(255,255,255,.70);
-  --w-low:  rgba(255,255,255,.47);
+  --white:  #FFFFFF;
+  --w-mid:  rgba(255,255,255,.68);
+  --w-low:  rgba(255,255,255,.46);
 
   --paper:      #FFFFFF;
-  --paper-alt:  #F1F4FA;
-  --paper-ink:  #001F5C;
-  --paper-mid:  #46567B;
-  --paper-low:  #7784A4;
-  --paper-rule: rgba(0,31,92,.14);
+  --paper-alt:  #F2F4F9;
+  --paper-ink:  #0B1533;
+  --paper-mid:  #4A5878;
+  --paper-low:  #7A87A3;
+  --paper-line: rgba(11,21,51,.13);
 
-  --display: "Poppins", "Helvetica Neue", Arial, sans-serif;
-  --body:    "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --f-display: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  --f-body:    "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
 
-  --wrap: 1240px;
-  --pad:  clamp(1.25rem, 5vw, 4rem);
-  --gap:  clamp(4rem, 8vw, 7.5rem);
+  --wrap: 1280px;
+  --pad: clamp(1.25rem, 5vw, 4rem);
+  --sec: clamp(4.25rem, 8.5vw, 8rem);
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -61,956 +51,1305 @@ html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 
 body{
-  margin:0; background:var(--ink); color:var(--w);
-  font-family:var(--body); font-size:1.0625rem; line-height:1.62; font-weight:400;
+  margin:0; background:var(--navy); color:var(--white);
+  font-family:var(--f-body); font-size:1.0625rem; line-height:1.65; font-weight:400;
   -webkit-font-smoothing:antialiased; overflow-x:hidden;
 }
 img{max-width:100%; display:block}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--w); outline-offset:3px; border-radius:2px}
+:focus-visible{outline:2px solid var(--white); outline-offset:3px; border-radius:2px}
 .paper :focus-visible{outline-color:var(--paper-ink)}
 
-h1,h2,h3,h4{font-family:var(--display); font-weight:600; line-height:1.08; letter-spacing:-.025em; margin:0; text-wrap:balance}
+h1,h2,h3,h4{font-family:var(--f-display); font-weight:600; line-height:1.1; letter-spacing:-.02em; margin:0; text-wrap:balance}
 p{margin:0}
-.skip{position:absolute; left:-9999px}
-.skip:focus{left:var(--pad); top:.6rem; z-index:200; background:var(--w); color:var(--ink); padding:.6rem 1rem; border-radius:3px}
+
+/* ---------- logo (single mask asset, colour from currentColor) ---------- */
+.logo{
+  display:block; background-color:currentColor;
+  -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+  -webkit-mask-size:contain; mask-size:contain;
+  -webkit-mask-position:left center; mask-position:left center;
+}
+.logo--full{
+  -webkit-mask-image:url("assets/img/tvg-logo-full.png"); mask-image:url("assets/img/tvg-logo-full.png");
+  width:198px; height:55px;
+}
+.logo--mark{
+  -webkit-mask-image:url("assets/img/tvg-logo-mark.png"); mask-image:url("assets/img/tvg-logo-mark.png");
+  width:44px; height:34px; flex:none;
+}
+@media (max-width:540px){.logo--full{width:154px; height:43px}}
 
 /* ---------- primitives ---------- */
-.wrap{max-width:var(--wrap); margin-inline:auto; padding-inline:var(--pad)}
-.band{padding-block:var(--gap); position:relative}
-.band--short{padding-block:clamp(2.75rem,5.5vw,4.5rem)}
+.container{max-width:var(--wrap); margin-inline:auto; padding-inline:var(--pad)}
+.section{padding-block:var(--sec); position:relative}
+.section--tight{padding-block:clamp(3rem,6vw,5rem)}
 
-.t-hero{font-size:clamp(2.6rem, 6.4vw, 5.1rem); letter-spacing:-.04em; line-height:1}
-.t-1{font-size:clamp(1.9rem, 4vw, 3rem); letter-spacing:-.032em}
-.t-2{font-size:clamp(1.3rem, 2.2vw, 1.8rem); letter-spacing:-.024em}
-
-.lede{font-size:clamp(1.05rem,1.4vw,1.22rem); line-height:1.58; color:var(--w-mid); max-width:56ch}
-.copy{color:var(--w-mid); max-width:64ch}
-.copy + .copy{margin-top:1rem}
-.paper .lede,.paper .copy,.paper p{color:var(--paper-mid)}
-.head-copy{margin-top:1.35rem}
-
-/* ---------- imagery treatments ---------- */
-/* duotone: illustration sourced from mixed palettes is flattened onto navy */
-.duo{background:var(--ink-deep); overflow:hidden; border-radius:5px; border:1px solid var(--rule-soft)}
-.duo img{width:100%; height:100%; object-fit:cover; mix-blend-mode:luminosity; filter:contrast(1.05); opacity:.94}
-.paper .duo{background:var(--ink); border-color:var(--paper-rule)}
-/* photographs of people keep their own colour */
-.photo{overflow:hidden; border-radius:5px; border:1px solid var(--rule-soft); background:var(--ink-deep)}
-.paper .photo{border-color:var(--paper-rule); background:var(--paper-alt)}
-.photo img{width:100%; height:100%; object-fit:cover}
-
-
-/* ---------- diagrams -----------------------------------------------------
-   One stroke system, themed by the ground it sits on. Everything is drawn
-   with currentColor so a diagram works on navy and on paper unchanged. */
-.dgwrap{color:var(--w); width:100%; display:flex; align-items:center; justify-content:center}
-.paper .dgwrap{color:var(--paper-ink)}
-.dg{width:100%; height:auto; display:block; font-family:var(--body)}
-.dg .arc{fill:none; stroke:currentColor; stroke-opacity:.38; stroke-width:1.4;
-         stroke-dasharray:1.5 7; stroke-linecap:round}
-.dg .ln{fill:none; stroke:currentColor; stroke-opacity:.3; stroke-width:1.25}
-.dg .box{fill:rgba(255,255,255,.055); stroke:currentColor; stroke-opacity:.3; stroke-width:1.25}
-.paper .dg .box{fill:#F1F4FA; stroke-opacity:.3}
-.dg .hub{fill:rgba(255,255,255,.05); stroke:currentColor; stroke-opacity:.26; stroke-width:1.25}
-.paper .dg .hub{fill:#EAF0FA; stroke-opacity:.28}
-.dg .key{fill:rgba(255,255,255,.12); stroke:currentColor; stroke-opacity:.5; stroke-width:1.25}
-.paper .dg .key{fill:#E2E9F7; stroke-opacity:.4}
-.dg .lbl{fill:currentColor; font-size:15.5px; font-weight:500; letter-spacing:-.005em}
-.dg .lbl-s{fill:currentColor; font-size:14px; font-weight:500}
-.dg .sub{fill:currentColor; fill-opacity:.6; font-size:12.5px; font-weight:400}
-.dg .glyph{fill:none; stroke:currentColor; stroke-opacity:.55; stroke-width:1.4;
-           stroke-linecap:round; stroke-linejoin:round}
-.dg .glyph-fill{fill:currentColor; fill-opacity:.5; stroke:none}
-.dg .head{fill:currentColor; fill-opacity:.42}
-
-.orbit{max-width:640px; margin-inline:auto}
-.path__dg{padding:clamp(1rem,2vw,1.5rem); border:1px solid var(--rule-soft);
-          border-radius:5px; background:var(--ink-deep)}
-.tile__dg{aspect-ratio:16/10; background:var(--ink-deep); border-bottom:1px solid var(--rule-soft);
-          display:flex; align-items:center; justify-content:center; padding:1.1rem; color:var(--w)}
-.paper .tile__dg{color:var(--w)}
-
-/* ---------- buttons & links ---------- */
-.btn{
-  display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; cursor:pointer;
-  font-family:var(--body); font-size:.9rem; font-weight:600; letter-spacing:.01em;
-  padding:.95rem 1.65rem; border-radius:100px; border:1px solid transparent;
-  transition:background-color .25s, border-color .25s, color .25s;
+.label{
+  font-family:var(--f-body); font-size:.7rem; font-weight:600; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--w-low); margin:0 0 1.4rem; display:block;
 }
-.btn--solid{background:var(--w); color:var(--ink); border-color:var(--w)}
-.btn--solid:hover{background:#D9E2F5; border-color:#D9E2F5}
-.btn--ghost{background:transparent; color:var(--w); border-color:var(--rule-firm)}
-.btn--ghost:hover{border-color:var(--w); background:rgba(255,255,255,.07)}
-.btn--ink{background:var(--ink); color:var(--w); border-color:var(--ink)}
-.btn--ink:hover{background:var(--ink-hover); border-color:var(--ink-hover)}
-.btn--ink-ghost{background:transparent; color:var(--paper-ink); border-color:var(--paper-rule)}
-.btn--ink-ghost:hover{border-color:var(--paper-ink)}
-.btns{display:flex; flex-wrap:wrap; gap:.75rem}
+.paper .label{color:var(--paper-low)}
 
-.tlink{
-  display:inline-block; text-decoration:none; font-size:.88rem; font-weight:600; color:var(--w);
-  padding-bottom:.3rem; border-bottom:1px solid var(--rule-firm); transition:border-color .2s;
+.t-hero{font-size:clamp(2.5rem, 6vw, 4.75rem); letter-spacing:-.035em; font-weight:600; line-height:1.03}
+.t-1{font-size:clamp(1.95rem, 4.2vw, 3.25rem); letter-spacing:-.03em}
+.t-2{font-size:clamp(1.35rem, 2.3vw, 1.9rem); letter-spacing:-.022em}
+.t-3{font-size:clamp(1.08rem, 1.5vw, 1.25rem); letter-spacing:-.012em; font-weight:600}
+
+.lede{font-size:clamp(1.05rem,1.45vw,1.24rem); line-height:1.6; color:var(--w-mid); max-width:58ch}
+.text{color:var(--w-mid); max-width:66ch}
+.text + .text{margin-top:1.05rem}
+.paper .lede,.paper .text,.paper p{color:var(--paper-mid)}
+
+.center{text-align:center; margin-inline:auto}
+.center .lede,.center .text{margin-inline:auto}
+
+/* ---------- buttons ---------- */
+.button{
+  display:inline-flex; align-items:center; gap:.65rem; text-decoration:none; cursor:pointer;
+  font-family:var(--f-body); font-size:.86rem; font-weight:600; letter-spacing:.015em;
+  padding:.95rem 1.6rem; border-radius:100px; border:1px solid transparent;
+  transition:background-color .28s, color .28s, border-color .28s;
 }
-.tlink:hover{border-color:var(--w)}
-.paper .tlink{color:var(--paper-ink); border-bottom-color:var(--paper-rule)}
-.paper .tlink:hover{border-color:var(--paper-ink)}
+.button svg{flex:none; transition:transform .28s}
+.button:hover svg{transform:translateX(4px)}
+.button--white{background:var(--white); color:var(--navy); border-color:var(--white)}
+.button--white:hover{background:#DCE3F2; border-color:#DCE3F2}
+.button--outline{background:transparent; color:var(--white); border-color:var(--line-firm)}
+.button--outline:hover{border-color:var(--white); background:rgba(255,255,255,.06)}
+.button--navy{background:var(--navy); color:var(--white); border-color:var(--navy)}
+.button--navy:hover{background:var(--navy-soft); border-color:var(--navy-soft)}
+.button--outline-navy{background:transparent; color:var(--paper-ink); border-color:var(--paper-line)}
+.button--outline-navy:hover{border-color:var(--paper-ink)}
+.buttons{display:flex; flex-wrap:wrap; gap:.8rem}
+.center .buttons{justify-content:center}
+
+.link{
+  display:inline-flex; align-items:center; gap:.5rem; text-decoration:none;
+  font-size:.85rem; font-weight:600; color:var(--white);
+  padding-bottom:.35rem; border-bottom:1px solid var(--line-firm);
+  transition:border-color .25s, color .25s;
+}
+.link:hover{border-color:var(--white)}
+.link svg{transition:transform .25s}
+.link:hover svg{transform:translateX(4px)}
+.paper .link{color:var(--paper-ink); border-bottom-color:var(--paper-line)}
+.paper .link:hover{border-color:var(--paper-ink)}
 
 /* ---------- header ---------- */
-.hdr{
-  position:sticky; top:0; z-index:90; background:rgba(0,31,92,.93);
-  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--rule-soft);
+.header{
+  position:sticky; top:0; z-index:80; background:rgba(11,21,51,.9);
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line-soft);
 }
-.hdr__in{display:flex; align-items:center; justify-content:space-between; gap:1.5rem; height:80px}
-.hdr__logo{display:flex; align-items:center; gap:.75rem; flex:none; text-decoration:none}
-.hdr__unit{font-family:var(--display); font-size:.95rem; font-weight:600; letter-spacing:-.01em;
-           color:var(--w); padding-left:.75rem; border-left:1px solid var(--rule-firm); line-height:1}
-@media (max-width:560px){.hdr__unit{font-size:.85rem; padding-left:.6rem}}
-.hdr__logo img{width:186px; height:auto}
-@media (max-width:560px){.hdr__in{height:66px} .hdr__logo img{width:146px}}
-
-.hdr__nav{display:none; align-items:center; gap:1.3rem}
-@media (min-width:1280px){.hdr__nav{display:flex}}
-.hdr__nav a{font-size:.855rem; white-space:nowrap; font-weight:500; color:var(--w-mid); text-decoration:none; transition:color .2s}
-.hdr__nav a:hover{color:var(--w)}
-.hdr__nav a[aria-current="page"]{color:var(--w)}
-.hdr__cta{display:none; white-space:nowrap}
-@media (min-width:1280px){.hdr__cta{display:inline-flex}}
-
-.burger{
-  display:inline-flex; align-items:center; gap:.55rem; background:none; cursor:pointer;
-  border:1px solid var(--rule-firm); border-radius:100px; color:var(--w);
-  font-family:var(--body); font-size:.8rem; font-weight:600; padding:.6rem 1rem; flex:none;
+.header__inner{display:flex; align-items:center; justify-content:space-between; gap:1.5rem; height:84px}
+.header__logo{display:flex; align-items:center; gap:.8rem; text-decoration:none; color:var(--white); min-width:0; flex:none}
+.header__logo-text{display:flex; flex-direction:column; gap:.15rem; min-width:0}
+.header__logo-name{
+  font-family:var(--f-display); font-weight:600; font-size:1.02rem; letter-spacing:-.01em;
+  line-height:1.1; white-space:nowrap;
 }
-@media (min-width:1280px){.burger{display:none}}
-.burger i{display:block; width:15px; height:1px; background:currentColor; position:relative}
-.burger i::before,.burger i::after{content:""; position:absolute; left:0; width:15px; height:1px; background:currentColor}
-.burger i::before{top:-5px}.burger i::after{top:5px}
-
-.drawer{display:none; background:var(--ink-deep); border-bottom:1px solid var(--rule-soft)}
-.drawer[data-open="true"]{display:block}
-@media (min-width:1280px){.drawer{display:none !important}}
-.drawer__nav{display:flex; flex-direction:column; padding-block:.75rem 2rem}
-.drawer__nav a{
-  text-decoration:none; color:var(--w); font-family:var(--display); font-size:1.25rem;
-  font-weight:500; letter-spacing:-.02em; padding-block:.8rem; border-bottom:1px solid var(--rule-soft);
+.header__logo-sub{font-size:.62rem; letter-spacing:.15em; text-transform:uppercase; color:var(--w-low); white-space:nowrap; line-height:1}
+@media (max-width:540px){
+  .header__inner{height:70px; gap:.9rem}
+  .header__logo-name{font-size:.92rem}
+  .header__logo-sub{font-size:.55rem; letter-spacing:.11em}
 }
-.drawer__nav .btn{margin-top:1.5rem; justify-content:center; border-bottom:0}
+
+.header__nav{display:none; align-items:center; gap:2.1rem}
+@media (min-width:1060px){.header__nav{display:flex}}
+.header__nav > a,.header__segment > button{
+  font-family:var(--f-body); font-size:.875rem; font-weight:500; color:var(--w-mid);
+  text-decoration:none; background:none; border:0; padding:0; cursor:pointer;
+  display:inline-flex; align-items:center; gap:.4rem; transition:color .25s;
+}
+.header__nav > a:hover,.header__segment > button:hover{color:var(--white)}
+.header__nav > a[aria-current="page"]{color:var(--white)}
+.header__segment{position:relative}
+.header__segment > button svg{transition:transform .25s}
+.header__segment[data-open="true"] > button svg{transform:rotate(180deg)}
+.header__service-list{
+  position:absolute; top:calc(100% + 1.4rem); left:50%; transform:translateX(-50%) translateY(-6px);
+  width:min(560px, 78vw); background:var(--navy-raised); border:1px solid var(--line);
+  border-radius:4px; padding:.6rem; display:grid; grid-template-columns:1fr 1fr; gap:.25rem;
+  opacity:0; visibility:hidden; transition:opacity .22s, transform .22s, visibility .22s;
+  box-shadow:0 30px 70px rgba(0,0,0,.45);
+}
+.header__segment[data-open="true"] .header__service-list{opacity:1; visibility:visible; transform:translateX(-50%) translateY(0)}
+.header__service-list a{
+  display:flex; flex-direction:column; gap:.3rem; padding:.95rem 1.05rem; border-radius:3px;
+  text-decoration:none; transition:background-color .22s;
+}
+.header__service-list a:hover{background:rgba(255,255,255,.06)}
+.header__service-list strong{font-family:var(--f-display); font-size:.92rem; font-weight:600; color:var(--white)}
+.header__service-list span{font-size:.8rem; color:var(--w-low); line-height:1.45}
+.header__button{display:none}
+@media (min-width:1060px){.header__button{display:inline-flex}}
+
+.header__menu-open{
+  display:inline-flex; align-items:center; gap:.6rem; background:none; cursor:pointer;
+  border:1px solid var(--line-firm); border-radius:100px; color:var(--white);
+  font-family:var(--f-body); font-size:.72rem; font-weight:600; letter-spacing:.14em;
+  text-transform:uppercase; padding:.62rem 1rem; flex:none;
+}
+@media (min-width:1060px){.header__menu-open{display:none}}
+.header__menu-open i{display:block; width:15px; height:1px; background:currentColor; position:relative}
+.header__menu-open i::before,.header__menu-open i::after{content:""; position:absolute; left:0; width:15px; height:1px; background:currentColor}
+.header__menu-open i::before{top:-5px}.header__menu-open i::after{top:5px}
+@media (max-width:540px){.header__menu-open{padding:.6rem .8rem} .header__menu-open .t{display:none}}
+
+.menu{display:none; border-top:1px solid var(--line-soft); background:var(--navy-deep)}
+.menu[data-open="true"]{display:block}
+@media (min-width:1060px){.menu{display:none !important}}
+.menu__nav{display:flex; flex-direction:column; padding-block:1.1rem 2.2rem}
+.menu__nav a{
+  text-decoration:none; color:var(--white); font-family:var(--f-display); font-size:1.3rem;
+  font-weight:500; letter-spacing:-.02em; padding-block:.78rem; border-bottom:1px solid var(--line-soft);
+}
+.menu__nav .button{margin-top:1.5rem; justify-content:center}
 
 /* ---------- hero ---------- */
-.hero{position:relative; overflow:hidden; border-bottom:1px solid var(--rule-soft)}
-.hero__bg{position:absolute; inset:0; pointer-events:none}
-.hero__bg svg{width:100%; height:100%; opacity:.85}
-.hero__bg::after{
+.hero-section{position:relative; overflow:hidden; border-bottom:1px solid var(--line-soft)}
+.hero-section__bg{position:absolute; inset:0; pointer-events:none}
+.hero-section__bg::before{
   content:""; position:absolute; inset:0;
-  background:linear-gradient(100deg, var(--ink) 32%, rgba(0,31,92,.72) 62%, rgba(0,31,92,.35) 100%);
+  background-image:
+    repeating-linear-gradient(to right, rgba(255,255,255,.05) 0 1px, transparent 1px 96px),
+    repeating-linear-gradient(to bottom, rgba(255,255,255,.04) 0 1px, transparent 1px 96px);
+  mask-image:radial-gradient(115% 85% at 72% 25%, #000 0%, transparent 70%);
+  -webkit-mask-image:radial-gradient(115% 85% at 72% 25%, #000 0%, transparent 70%);
 }
-.hero__mark{
-  position:absolute; right:-4%; top:50%; transform:translateY(-50%);
-  width:min(40vw, 460px); opacity:.07; pointer-events:none;
+.hero-section__bg::after{
+  content:""; position:absolute; inset:0;
+  background:radial-gradient(70% 60% at 78% 18%, rgba(58,92,190,.28), transparent 68%);
 }
-@media (max-width:900px){.hero__mark{display:none}}
-.hero__in{position:relative; padding-block:clamp(4rem,10vw,8rem) clamp(3.5rem,7vw,6rem)}
-.hero__title{max-width:15ch}
-.hero__lede{margin-top:1.7rem; max-width:52ch}
-.hero__btns{margin-top:2.4rem}
-.hero__meta{
-  margin-top:clamp(3rem,6vw,4.5rem); padding-top:1.4rem; border-top:1px solid var(--rule-soft);
-  display:flex; flex-wrap:wrap; gap:.6rem 2.5rem; font-size:.88rem; color:var(--w-low);
+.hero-section__mark{
+  position:absolute; right:-6%; top:50%; transform:translateY(-50%);
+  width:min(46vw, 620px); aspect-ratio:470/366; opacity:.05; pointer-events:none;
+  background-color:#fff;
+  -webkit-mask-image:url("assets/img/tvg-logo-mark.png"); mask-image:url("assets/img/tvg-logo-mark.png");
+  -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+}
+@media (max-width:860px){.hero-section__mark{display:none}}
+.hero-section__inner{position:relative; padding-block:clamp(4.5rem,12vw,9rem) clamp(4rem,9vw,7rem)}
+.hero-section__title{max-width:17ch}
+.hero-section .lede{margin-top:1.8rem}
+.hero-section__button{margin-top:2.6rem}
+
+/* ---------- marquee ---------- */
+.marquee{border-block:1px solid var(--line-soft); background:var(--navy-deep); overflow:hidden; padding-block:1.65rem}
+.marquee__title{
+  font-size:.68rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--w-low); text-align:center; margin-bottom:1.1rem;
+}
+.marquee__inner{overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee__list{display:flex; width:max-content; animation:marq 34s linear infinite}
+.marquee__list li{
+  list-style:none; display:flex; align-items:center; gap:1.9rem; padding-right:1.9rem;
+  font-family:var(--f-display); font-size:clamp(.95rem,1.4vw,1.15rem); font-weight:500;
+  color:var(--w-mid); white-space:nowrap;
+}
+.marquee__list li::after{content:""; width:6px; height:6px; border:1px solid var(--line-firm); transform:rotate(45deg); flex:none}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.marquee__list{animation:none}}
+
+/* ---------- carousel (shared: capabilities / approach / media) ---------- */
+.swiper-head{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; flex-wrap:wrap; margin-bottom:clamp(2rem,4vw,3rem)}
+.swiper-head__text{flex:1 1 30rem; max-width:46rem}
+.swiper-head__text .text{max-width:54ch}
+.swiper-nav{display:flex; gap:.6rem; flex:none}
+.swiper-nav__button{
+  width:46px; height:46px; border-radius:50%; border:1px solid var(--line-firm);
+  background:transparent; color:var(--white); display:grid; place-items:center; cursor:pointer;
+  transition:background-color .25s, border-color .25s, opacity .25s;
+}
+.swiper-nav__button:hover:not(:disabled){background:rgba(255,255,255,.1); border-color:var(--white)}
+.swiper-nav__button:disabled{opacity:.28; cursor:default}
+.paper .swiper-nav__button{border-color:var(--paper-line); color:var(--paper-ink)}
+.paper .swiper-nav__button:hover:not(:disabled){background:rgba(11,21,51,.06); border-color:var(--paper-ink)}
+
+.swiper{position:relative}
+.swiper-wrapper{
+  display:flex; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory;
+  scrollbar-width:none; -ms-overflow-style:none; padding-bottom:.25rem;
+}
+.swiper-wrapper::-webkit-scrollbar{display:none}
+.swiper-slide{scroll-snap-align:start; flex:0 0 min(88vw, 25rem)}
+@media (min-width:760px){.swiper-slide{flex-basis:calc((100% - 1rem)/2)}}
+@media (min-width:1100px){.swiper-slide{flex-basis:calc((100% - 2rem)/3)}}
+.swiper--wide .swiper-slide{flex:0 0 min(88vw, 27rem)}
+@media (min-width:1100px){.swiper--wide .swiper-slide{flex-basis:calc((100% - 2rem)/3)}}
+
+.swiper-pagination{display:flex; gap:.45rem; justify-content:center; margin-top:2rem}
+.swiper-pagination-bullet{
+  width:26px; height:2px; background:var(--line-firm); border:0; padding:0; cursor:pointer;
+  transition:background-color .25s;
+}
+.swiper-pagination-bullet-active{background:var(--white)}
+.paper .swiper-pagination-bullet{background:var(--paper-line)}
+.paper .swiper-pagination-bullet-active{background:var(--paper-ink)}
+
+/* ---------- info card ---------- */
+.info-card{
+  background:var(--navy-raised); border:1px solid var(--line-soft); border-radius:4px;
+  padding:clamp(1.6rem,2.6vw,2.1rem); display:flex; flex-direction:column; gap:.85rem; height:100%;
+  transition:border-color .3s, background-color .3s;
+}
+.info-card:hover{border-color:var(--line-firm); background:#162654}
+.info-card__label{font-size:.68rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--w-low); font-variant-numeric:tabular-nums}
+.info-card__title{font-family:var(--f-display); font-size:1.16rem; font-weight:600; letter-spacing:-.015em; line-height:1.25}
+.info-card__text{font-size:.94rem; color:var(--w-mid)}
+.info-card .link{margin-top:auto; align-self:flex-start; padding-top:.5rem}
+.info-card__step{
+  font-family:var(--f-display); font-size:2.6rem; font-weight:600; letter-spacing:-.04em;
+  line-height:1; color:rgba(255,255,255,.16); margin-bottom:.2rem;
+}
+.paper .info-card{background:var(--paper-alt); border-color:var(--paper-line)}
+.paper .info-card:hover{background:#E8ECF6; border-color:rgba(11,21,51,.28)}
+.paper .info-card__label{color:var(--paper-low)}
+.paper .info-card__title{color:var(--paper-ink)}
+.paper .info-card__text{color:var(--paper-mid)}
+.paper .info-card__step{color:rgba(11,21,51,.16)}
+
+/* ---------- media card ---------- */
+.media-card{
+  background:var(--navy-raised); border:1px solid var(--line-soft); border-radius:4px;
+  display:flex; flex-direction:column; height:100%; overflow:hidden;
+  transition:border-color .3s;
+}
+.media-card:hover{border-color:var(--line-firm)}
+.media-card__img{
+  aspect-ratio:16/9; background:
+    linear-gradient(135deg, #16265A 0%, #0D1A40 100%);
+  position:relative; border-bottom:1px solid var(--line-soft);
+}
+.media-card__img::after{
+  content:""; position:absolute; inset:0; background-color:rgba(255,255,255,.08);
+  -webkit-mask-image:url("assets/img/tvg-logo-mark.png"); mask-image:url("assets/img/tvg-logo-mark.png");
+  -webkit-mask-size:34% auto; mask-size:34% auto;
+  -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+  -webkit-mask-position:center; mask-position:center;
+}
+.media-card__text{padding:1.5rem; display:flex; flex-direction:column; gap:.8rem; flex:1}
+.media-card__tags{display:flex; flex-wrap:wrap; gap:.4rem}
+.media-card__tag{
+  font-size:.66rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--w-mid); border:1px solid var(--line); border-radius:100px; padding:.32rem .7rem;
+}
+.media-card__title{font-family:var(--f-display); font-size:1.06rem; font-weight:600; letter-spacing:-.015em; line-height:1.3}
+.media-card__meta{font-size:.86rem; color:var(--w-low); margin-top:auto}
+
+/* ---------- text-section (centered narrative) ---------- */
+.text-section__title{max-width:20ch; margin-inline:auto}
+.text-section__text{margin-top:1.6rem; max-width:62ch; margin-inline:auto}
+
+/* ---------- two column split ---------- */
+.finance-section__inner{display:grid; grid-template-columns:1fr; gap:clamp(2.5rem,5vw,4.5rem)}
+@media (min-width:960px){.finance-section__inner{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); align-items:start}}
+.finance-section__list{list-style:none; margin:0; padding:0; display:grid; gap:0}
+.finance-section__item{
+  display:grid; grid-template-columns:auto 1fr; gap:1.1rem; align-items:start;
+  padding-block:1.25rem; border-top:1px solid var(--line-soft);
+}
+.finance-section__item:last-child{border-bottom:1px solid var(--line-soft)}
+.finance-section__icon{
+  width:26px; height:20px; margin-top:.3rem; flex:none; background-color:var(--w-low);
+  -webkit-mask-image:url("assets/img/tvg-logo-mark.png"); mask-image:url("assets/img/tvg-logo-mark.png");
+  -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+}
+.finance-section__item h3{font-family:var(--f-display); font-size:1.05rem; font-weight:600; letter-spacing:-.012em; margin-bottom:.3rem}
+.finance-section__item p{font-size:.93rem; color:var(--w-mid)}
+.paper .finance-section__item{border-color:var(--paper-line)}
+.paper .finance-section__item:last-child{border-bottom-color:var(--paper-line)}
+.paper .finance-section__icon{background-color:var(--paper-low)}
+
+/* ---------- accelerate (centered CTA) ---------- */
+.accelerate-section{position:relative; overflow:hidden}
+.accelerate-section__inner{position:relative; text-align:center; display:flex; flex-direction:column; align-items:center; gap:1.5rem}
+.accelerate-section__title{max-width:17ch}
+.accelerate-section__text{max-width:52ch}
+
+/* ---------- news-section (featured block) ---------- */
+.news-section__inner{display:grid; grid-template-columns:1fr; gap:clamp(2rem,5vw,4rem); align-items:center}
+@media (min-width:960px){.news-section__inner{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}}
+.news-section__image-block{
+  position:relative; aspect-ratio:4/5; border:1px solid var(--paper-line); border-radius:4px;
+  background:linear-gradient(160deg,#F5F7FC 0%, #E4E9F5 100%); overflow:hidden;
+  display:flex; flex-direction:column; justify-content:space-between; padding:clamp(1.4rem,2.6vw,2rem);
+}
+.news-section__image-block::before{
+  content:""; position:absolute; inset:0; opacity:.5;
+  background-image:repeating-linear-gradient(to bottom, rgba(11,21,51,.05) 0 1px, transparent 1px 8px);
+}
+.news-section__img{
+  position:relative; width:58%; margin-top:auto; aspect-ratio:470/366;
+  background-color:rgba(11,21,51,.14);
+  -webkit-mask-image:url("assets/img/tvg-logo-mark.png"); mask-image:url("assets/img/tvg-logo-mark.png");
+  -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+}
+.news-section__label{position:relative; font-size:.66rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--paper-low)}
+.news-section__categories{display:flex; flex-wrap:wrap; gap:.45rem; margin-bottom:1.3rem}
+.news-section__category{
+  font-size:.66rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase;
+  border:1px solid var(--paper-line); border-radius:100px; padding:.35rem .75rem; color:var(--paper-mid);
+}
+.news-section__quote{
+  font-family:var(--f-display); font-weight:400; font-size:clamp(1.15rem,1.9vw,1.5rem);
+  line-height:1.4; letter-spacing:-.02em; color:var(--paper-ink); margin-top:1.8rem; max-width:32ch;
 }
 
-.lift{opacity:0; transform:translateY(14px)}
-.loaded .lift{opacity:1; transform:none; transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1)}
-.loaded .lift:nth-child(2){transition-delay:.08s}
-.loaded .lift:nth-child(3){transition-delay:.16s}
-.loaded .lift:nth-child(4){transition-delay:.24s}
-.loaded .lift:nth-child(5){transition-delay:.32s}
-@media (prefers-reduced-motion: reduce){
-  .lift{opacity:1; transform:none}
-  .loaded .lift{transition:none}
-}
-
-/* ---------- client strip ---------- */
-.strip{background:var(--ink-deep); border-bottom:1px solid var(--rule-soft); padding-block:1.7rem}
-.strip__in{display:flex; flex-wrap:wrap; align-items:center; gap:1rem 2.2rem}
-.strip__lab{font-size:.85rem; color:var(--w-low); flex:none}
-.strip__names{display:flex; flex-wrap:wrap; align-items:center; gap:.8rem 2rem; list-style:none; margin:0; padding:0}
-.strip__names li{font-family:var(--display); font-weight:500; font-size:clamp(.95rem,1.3vw,1.08rem); color:var(--w-mid)}
-
-/* ---------- grids ---------- */
-.grid{display:grid; grid-template-columns:1fr; gap:1rem}
-@media (min-width:720px){.grid--2{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:980px){.grid--3{grid-template-columns:repeat(3,1fr)}}
-@media (min-width:720px){.grid--4{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:1080px){.grid--4{grid-template-columns:repeat(4,1fr)}}
-
-/* ---------- section heading ---------- */
-.shead{max-width:52rem; margin-bottom:clamp(2.2rem,4vw,3.2rem)}
-.shead--split{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; flex-wrap:wrap; max-width:none}
-.shead--split > div:first-child{flex:1 1 30rem; max-width:46rem}
-
-/* ---------- gap section ---------- */
-.gap-grid{display:grid; grid-template-columns:1fr; gap:clamp(1.6rem,4vw,3.5rem); align-items:center}
-@media (min-width:920px){.gap-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
-.gap-grid .copy{max-width:54ch}
-
-
-/* ---------- capability tiles ---------- */
-.tile{
-  border:1px solid var(--rule-soft); border-radius:5px; overflow:hidden; background:var(--ink-raised);
-  display:flex; flex-direction:column; height:100%;
-}
-.tile__img{aspect-ratio:16/10; background:var(--ink-deep); overflow:hidden; border-bottom:1px solid var(--rule-soft)}
-.tile__img img{width:100%; height:100%; object-fit:cover; mix-blend-mode:luminosity; filter:contrast(1.05) brightness(.88); opacity:.94}
-.tile__body{padding:1.35rem; display:flex; flex-direction:column; gap:.6rem}
-.tile h3{font-size:1.05rem; color:var(--w)}
-.tile p{font-size:.93rem; color:var(--w-mid)}
-
-/* ---------- two paths ---------- */
-.path{
+/* ---------- capability detail rows ---------- */
+.cap-row{
   display:grid; grid-template-columns:1fr; gap:1.6rem;
-  padding-block:clamp(2.4rem,4.5vw,3.4rem); border-top:1px solid var(--rule-soft);
+  padding-block:clamp(2.2rem,4.5vw,3.4rem); border-top:1px solid var(--line-soft);
 }
-@media (min-width:940px){
-  .path{grid-template-columns:minmax(0,.58fr) minmax(0,1fr) minmax(0,.86fr); gap:clamp(1.6rem,4vw,3rem); align-items:start}
-  .path__art{order:3}
-}
-.path--first{border-top:0; padding-top:0}
-.path__art{aspect-ratio:4/3}
-.path__kicker{font-size:.95rem; color:var(--w); margin-top:.6rem; font-weight:500}
-.path__note{margin-top:1.5rem; font-size:.95rem; color:var(--w-mid); max-width:64ch}
-.path__note strong{color:var(--w); font-weight:600}
-.bullets{list-style:none; margin:1.3rem 0 0; padding:0; display:grid; gap:.55rem; grid-template-columns:1fr}
-@media (min-width:560px){.bullets--2{grid-template-columns:repeat(2,1fr)}}
-.bullets li{position:relative; padding-left:1.25rem; font-size:.94rem; color:var(--w-mid)}
-.bullets li::before{content:""; position:absolute; left:0; top:.68em; width:7px; height:1px; background:var(--w-low)}
+@media (min-width:900px){.cap-row{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(2rem,6vw,5rem)}}
+.cap-row__label{font-size:.7rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--w-low); margin-bottom:.9rem; font-variant-numeric:tabular-nums}
+.cap-row__kicker{font-size:.95rem; color:var(--white); margin-top:.7rem; font-weight:500}
+.list{list-style:none; margin:1.4rem 0 0; padding:0; display:grid; gap:.6rem; grid-template-columns:1fr}
+@media (min-width:560px){.list--2{grid-template-columns:repeat(2,1fr)}}
+.list li{position:relative; padding-left:1.4rem; font-size:.94rem; color:var(--w-mid)}
+.list li::before{content:""; position:absolute; left:0; top:.6em; width:6px; height:5px; background-color:var(--w-low);
+  -webkit-mask-image:url("assets/img/tvg-logo-mark.png"); mask-image:url("assets/img/tvg-logo-mark.png");
+  -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat}
+.paper .list li{color:var(--paper-mid)}
+.paper .list li::before{background-color:var(--paper-low)}
 
-/* ---------- four stages ---------- */
-.stages{display:grid; grid-template-columns:1fr; gap:0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule)}
-@media (min-width:900px){.stages{grid-template-columns:repeat(4,1fr)}}
-.stage{padding:clamp(1.7rem,3vw,2.4rem) clamp(1.2rem,2vw,1.8rem); border-bottom:1px solid var(--rule-soft)}
-.stage:last-child{border-bottom:0}
-@media (min-width:900px){
-  .stage{border-bottom:0; border-left:1px solid var(--rule-soft)}
-  .stage:first-child{border-left:0; padding-left:0}
-  .stage:last-child{padding-right:0}
+/* ---------- ventures (group page) ---------- */
+.venture{display:grid; grid-template-columns:1fr; gap:1rem}
+@media (min-width:900px){.venture{grid-template-columns:1.35fr 1fr 1fr}}
+.venture__card{
+  background:var(--navy-raised); border:1px solid var(--line-soft); border-radius:4px;
+  padding:clamp(1.7rem,3vw,2.4rem); display:flex; flex-direction:column; gap:1rem;
+  transition:border-color .3s;
 }
-.stage__n{
-  font-family:var(--display); font-size:clamp(3.2rem,6vw,4.6rem); font-weight:600; line-height:.85;
-  letter-spacing:-.05em; color:transparent; -webkit-text-stroke:1px var(--rule-firm);
-  display:block; margin-bottom:1.1rem;
+.venture__card:hover{border-color:var(--line-firm)}
+.venture__card--lead{background:#16265A; border-color:var(--line)}
+.venture__status{
+  font-size:.66rem; font-weight:600; letter-spacing:.17em; text-transform:uppercase;
+  display:inline-flex; align-items:center; gap:.55rem; color:var(--w-low);
 }
-.stage__name{font-family:var(--display); font-size:1.5rem; font-weight:600; letter-spacing:-.028em; margin-bottom:.55rem}
-.stage p{font-size:.93rem; color:var(--w-mid)}
-.stage__exit{margin-top:1.1rem; padding-top:.9rem; border-top:1px solid var(--rule-soft); font-size:.86rem; color:var(--w-low)}
-.stage__exit b{display:block; color:var(--w-mid); font-weight:600; margin-bottom:.2rem}
-
-/* ---------- numbers ---------- */
-.nums{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--paper-rule); border:1px solid var(--paper-rule); border-radius:5px; overflow:hidden}
-@media (min-width:780px){.nums{grid-template-columns:repeat(4,1fr)}}
-.num{background:var(--paper); padding:clamp(1.5rem,3vw,2.1rem)}
-.num__v{font-family:var(--display); font-size:clamp(2rem,3.6vw,2.8rem); font-weight:600; letter-spacing:-.04em; line-height:1; color:var(--paper-ink)}
-.num__l{margin-top:.6rem; font-size:.88rem; color:var(--paper-mid); max-width:22ch}
+.venture__status::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--w-low)}
+.venture__status--live{color:var(--white)}
+.venture__status--live::before{background:var(--white); box-shadow:0 0 0 3px rgba(255,255,255,.16)}
+.venture__name{font-family:var(--f-display); font-size:clamp(1.3rem,2.2vw,1.75rem); font-weight:600; letter-spacing:-.025em}
+.venture__kind{font-size:.8rem; letter-spacing:.11em; text-transform:uppercase; color:var(--w-mid)}
+.venture__card p{color:var(--w-mid); font-size:.94rem}
+.venture__card .button,.venture__card .link{margin-top:auto; align-self:flex-start}
 
 /* ---------- founder ---------- */
-.founder{display:grid; grid-template-columns:1fr; gap:clamp(2rem,5vw,4rem); align-items:center}
-@media (min-width:940px){.founder{grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr)}}
-.founder__portrait{
-  position:relative; border-radius:5px; overflow:hidden; max-width:360px;
-  background:linear-gradient(165deg,#E8EDF8 0%, #CFD9EE 100%);
-  aspect-ratio:4/5; display:flex; align-items:flex-end; justify-content:center;
-}
-.founder__portrait::before{
-  content:""; position:absolute; inset:0;
-  background:repeating-linear-gradient(to bottom, rgba(0,31,92,.05) 0 1px, transparent 1px 9px);
-}
-.founder__portrait img{position:relative; width:96%; height:auto; object-fit:contain}
+.founder{display:grid; grid-template-columns:1fr; gap:clamp(2rem,5vw,4rem); align-items:start}
+@media (min-width:920px){.founder{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
 .creds{list-style:none; margin:1.6rem 0 0; padding:0}
-.creds li{padding-block:.85rem; border-top:1px solid var(--paper-rule); font-size:.93rem; color:var(--paper-mid); display:flex; gap:1.2rem; align-items:baseline}
-.creds li:last-child{border-bottom:1px solid var(--paper-rule)}
-.creds b{font-family:var(--body); font-weight:600; color:var(--paper-ink); font-size:.86rem; flex:none; width:8.5rem}
-@media (max-width:560px){.creds li{flex-direction:column; gap:.2rem} .creds b{width:auto}}
-.pullquote{
-  font-family:var(--display); font-weight:400; font-size:clamp(1.1rem,1.8vw,1.4rem);
-  line-height:1.42; letter-spacing:-.02em; color:var(--paper-ink); margin-top:1.8rem; max-width:34ch;
+.creds li{
+  padding-block:.85rem; border-top:1px solid var(--paper-line); font-size:.92rem;
+  color:var(--paper-mid); display:flex; gap:1.2rem; align-items:baseline;
 }
-
-/* ---------- why ---------- */
-.why{display:grid; grid-template-columns:1fr; gap:0; border-top:1px solid var(--paper-rule)}
-@media (min-width:820px){.why{grid-template-columns:repeat(2,1fr)}}
-.why__item{padding-block:clamp(1.5rem,3vw,2.2rem); border-bottom:1px solid var(--paper-rule)}
-@media (min-width:820px){
-  .why__item{padding-right:clamp(1.5rem,4vw,3rem)}
-  .why__item:nth-child(even){padding-right:0; padding-left:clamp(1.5rem,4vw,3rem); border-left:1px solid var(--paper-rule)}
+.creds li b{
+  font-family:var(--f-body); font-weight:600; color:var(--paper-ink); font-size:.66rem;
+  letter-spacing:.15em; text-transform:uppercase; flex:none; width:8.5rem;
 }
-.why__item h3{font-size:1.12rem; margin-bottom:.55rem; color:var(--paper-ink)}
-.why__item p{font-size:.94rem; max-width:44ch}
+@media (max-width:560px){.creds li{flex-direction:column; gap:.25rem} .creds li b{width:auto}}
 
-/* ---------- carousel ---------- */
-.rail{position:relative}
-.rail__track{display:flex; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; -ms-overflow-style:none; padding-bottom:.25rem}
-.rail__track::-webkit-scrollbar{display:none}
-.rail__item{scroll-snap-align:start; flex:0 0 min(86vw, 25rem)}
-@media (min-width:820px){.rail__item{flex-basis:calc((100% - 1rem)/2)}}
-@media (min-width:1140px){.rail__item{flex-basis:calc((100% - 2rem)/3)}}
-.rail__nav{display:flex; gap:.55rem; flex:none}
-.rail__btn{
-  width:44px; height:44px; border-radius:50%; border:1px solid var(--paper-rule);
-  background:transparent; color:var(--paper-ink); display:grid; place-items:center; cursor:pointer;
-  transition:background-color .2s, border-color .2s, opacity .2s;
+/* ---------- engagement rows ---------- */
+.eng__row{
+  display:grid; grid-template-columns:1fr; gap:.6rem; align-items:baseline;
+  padding-block:clamp(1.4rem,2.8vw,2rem); border-top:1px solid var(--line-soft); transition:background-color .3s;
 }
-.rail__btn:hover:not(:disabled){background:rgba(0,31,92,.06); border-color:var(--paper-ink)}
-.rail__btn:disabled{opacity:.3; cursor:default}
+@media (min-width:880px){.eng__row{grid-template-columns:minmax(0,.8fr) minmax(0,.55fr) minmax(0,1.35fr); gap:clamp(1.5rem,4vw,3rem)}}
+.eng__row:last-child{border-bottom:1px solid var(--line-soft)}
+.eng__row:hover{background:rgba(255,255,255,.03)}
+.eng__name{font-family:var(--f-display); font-size:clamp(1.1rem,1.8vw,1.4rem); font-weight:600; letter-spacing:-.02em}
+.eng__for{font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--w-low); font-weight:600}
+.eng__desc{font-size:.95rem; color:var(--w-mid)}
 
-.quote{
-  background:var(--paper-alt); border:1px solid var(--paper-rule); border-radius:5px;
-  padding:clamp(1.6rem,2.6vw,2rem); height:100%; display:flex; flex-direction:column; gap:1.2rem; margin:0;
+/* ---------- grids ---------- */
+.cols{display:grid; grid-template-columns:1fr; gap:1rem}
+@media (min-width:760px){.cols--2{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cols--3{grid-template-columns:repeat(3,1fr)}}
+.pillar{
+  background:var(--navy-raised); border:1px solid var(--line-soft); border-radius:4px;
+  padding:clamp(1.5rem,2.8vw,2rem); display:flex; flex-direction:column; gap:.7rem;
 }
-.quote blockquote{margin:0; font-size:.98rem; line-height:1.6; color:var(--paper-mid)}
-.quote__who{display:flex; align-items:center; gap:.85rem; margin-top:auto}
-.quote__who img{width:46px; height:46px; border-radius:50%; object-fit:cover; flex:none; background:var(--paper)}
-.quote__who img.is-logo{border-radius:4px; object-fit:contain; padding:3px; border:1px solid var(--paper-rule)}
-.quote__name{display:block; font-family:var(--display); font-weight:600; font-size:.95rem; color:var(--paper-ink); letter-spacing:-.012em}
-.quote__role{display:block; font-size:.83rem; color:var(--paper-low)}
-
-/* ---------- writing ---------- */
-.post{
-  border:1px solid var(--rule-soft); border-radius:5px; overflow:hidden; height:100%;
-  display:flex; flex-direction:column; background:var(--ink-raised); text-decoration:none; transition:border-color .25s;
+.pillar h4{font-size:1.05rem}
+.pillar p{font-size:.92rem; color:var(--w-mid)}
+.slot{
+  border:1px dashed var(--line); border-radius:4px; padding:clamp(1.5rem,3vw,2.1rem);
+  display:flex; flex-direction:column; gap:.65rem; justify-content:center; min-height:12rem;
 }
-.post:hover{border-color:var(--rule-firm)}
-.post__img{aspect-ratio:16/10; overflow:hidden; background:var(--ink-deep); border-bottom:1px solid var(--rule-soft)}
-.post__img img{width:100%; height:100%; object-fit:cover}
-.post__body{padding:1.4rem; display:flex; flex-direction:column; gap:.9rem; flex:1}
-.post__title{font-family:var(--display); font-size:1.03rem; font-weight:600; line-height:1.32; letter-spacing:-.018em}
-.post__meta{margin-top:auto; display:flex; align-items:center; gap:.65rem; font-size:.85rem; color:var(--w-low)}
-.post__meta img{width:30px; height:30px; border-radius:50%; object-fit:cover; flex:none}
-
-/* ---------- contact ---------- */
-.contact-grid{display:grid; grid-template-columns:1fr; gap:clamp(2.2rem,5vw,4rem)}
-@media (min-width:940px){.contact-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); align-items:center}}
-
-.details{list-style:none; margin:0; padding:0}
-.details li{padding-block:1.15rem; border-top:1px solid var(--rule-soft)}
-.details li:last-child{border-bottom:1px solid var(--rule-soft)}
-.details .lab{display:block; font-size:.84rem; color:var(--w-low); margin-bottom:.3rem}
-.details a,.details p{font-family:var(--display); font-size:1.02rem; font-weight:500; color:var(--w); text-decoration:none; letter-spacing:-.014em}
-.details a:hover{text-decoration:underline}
-.contact-art{margin-top:0}
-
-/* ---------- CTA ---------- */
-.cta{text-align:center; display:flex; flex-direction:column; align-items:center; gap:1.4rem}
-.cta h2{max-width:16ch}
-.cta .lede{max-width:50ch}
-.cta .btns{justify-content:center}
-.cta__mark{width:74px; opacity:.9; margin-bottom:.4rem}
+.slot__tag{font-size:.66rem; font-weight:600; letter-spacing:.17em; text-transform:uppercase; color:var(--w-low)}
+.slot p{font-size:.9rem; color:var(--w-low)}
 
 /* ---------- paper inversion ---------- */
 .paper{background:var(--paper); color:var(--paper-ink)}
 .paper h1,.paper h2,.paper h3,.paper h4{color:var(--paper-ink)}
-.paper .tile h3{color:var(--w)}
+.paper .media-card,.paper .pillar{background:var(--paper-alt); border-color:var(--paper-line)}
+.paper .media-card__tag{color:var(--paper-mid); border-color:var(--paper-line)}
+.paper .media-card__meta{color:var(--paper-low)}
+.paper .eng__row{border-color:var(--paper-line)}
+.paper .eng__row:last-child{border-bottom-color:var(--paper-line)}
+.paper .eng__row:hover{background:rgba(11,21,51,.035)}
+.paper .eng__for{color:var(--paper-low)}
+.paper .eng__desc{color:var(--paper-mid)}
+.paper .slot{border-color:var(--paper-line)}
+.paper .slot__tag,.paper .slot p{color:var(--paper-low)}
+.paper .cap-row{border-color:var(--paper-line)}
+.paper .cap-row__label{color:var(--paper-low)}
+.paper .cap-row__kicker{color:var(--paper-ink)}
 
 /* ---------- footer ---------- */
-.ftr{position:relative; background:var(--ink-deep); border-top:1px solid var(--rule-soft); padding-block:clamp(3rem,6vw,4.2rem) 1.8rem; overflow:hidden}
-.ftr .wrap{position:relative}
-.ftr__top{display:grid; grid-template-columns:1fr; gap:2.4rem}
-@media (min-width:840px){.ftr__top{grid-template-columns:1.6fr 1fr 1fr 1fr}}
-.ftr__logo{display:block}
-.ftr__logo img{width:200px; height:auto; margin-bottom:1rem}
-.ftr__blurb{font-size:.9rem; color:var(--w-low); max-width:32ch}
-.ftr h5{font-family:var(--body); font-size:.86rem; font-weight:600; color:var(--w); margin:0 0 1rem}
-.ftr__menu{list-style:none; margin:0; padding:0; display:grid; gap:.6rem}
-.ftr__menu a{text-decoration:none; color:var(--w-mid); font-size:.9rem; transition:color .2s}
-.ftr__menu a:hover{color:var(--w)}
-.ftr__bottom{
-  margin-top:clamp(2.4rem,5vw,3.5rem); padding-top:1.4rem; border-top:1px solid var(--rule-soft);
-  display:flex; flex-wrap:wrap; gap:1rem 2rem; justify-content:space-between; align-items:center;
-  font-size:.83rem; color:var(--w-low);
+.footer{background:var(--navy-deep); border-top:1px solid var(--line-soft); padding-block:clamp(3.2rem,6vw,4.5rem) 2rem}
+.footer__top{display:grid; grid-template-columns:1fr; gap:2.6rem}
+@media (min-width:860px){.footer__top{grid-template-columns:1.7fr 1fr 1fr 1fr}}
+.footer__logo{color:var(--white); display:block; margin-bottom:1.1rem}
+.footer__blurb{font-size:.9rem; color:var(--w-low); max-width:32ch}
+.footer__block h5{
+  font-family:var(--f-body); font-size:.66rem; font-weight:600; letter-spacing:.19em;
+  text-transform:uppercase; color:var(--w-low); margin:0 0 1.1rem;
 }
-.social{display:flex; gap:1.2rem; flex-wrap:wrap}
-.social a{color:var(--w-mid); text-decoration:none; font-size:.88rem; transition:color .2s}
-.social a:hover{color:var(--w)}
+.footer__menu{list-style:none; margin:0; padding:0; display:grid; gap:.65rem}
+.footer__menu a{text-decoration:none; color:var(--w-mid); font-size:.9rem; transition:color .25s}
+.footer__menu a:hover{color:var(--white)}
+.footer__bottom{
+  margin-top:clamp(2.6rem,5vw,4rem); padding-top:1.5rem; border-top:1px solid var(--line-soft);
+  display:flex; flex-wrap:wrap; gap:1rem 2rem; justify-content:space-between; font-size:.8rem; color:var(--w-low);
+}
+
+/* ---------- form ---------- */
+.form{display:grid; gap:1.25rem; max-width:44rem}
+@media (min-width:640px){.form__pair{display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem}}
+.field{display:flex; flex-direction:column; gap:.5rem}
+.field label{font-size:.68rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--w-low)}
+.field input,.field select,.field textarea{
+  font-family:var(--f-body); font-size:1rem; color:var(--white); background:var(--navy-raised);
+  border:1px solid var(--line); border-radius:3px; padding:.88rem 1rem; width:100%;
+  transition:border-color .25s, background-color .25s;
+}
+.field textarea{min-height:8.5rem; resize:vertical; line-height:1.55}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--white); outline:none; background:#16265A}
+.field input::placeholder,.field textarea::placeholder{color:var(--w-low)}
+.field select{appearance:none; background-image:linear-gradient(45deg,transparent 50%,rgba(255,255,255,.5) 50%),linear-gradient(135deg,rgba(255,255,255,.5) 50%,transparent 50%); background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%; background-size:5px 5px,5px 5px; background-repeat:no-repeat}
+.field select option{background:var(--navy-raised); color:var(--white)}
+.form__note{font-size:.82rem; color:var(--w-low); max-width:44ch}
+.form__msg{display:none; border:1px solid var(--line-firm); background:rgba(255,255,255,.07); padding:1.1rem 1.25rem; font-size:.94rem; border-radius:3px}
+.form__msg[data-show="true"]{display:block}
+
+/* ---------- reveal + routing ---------- */
+.rv{opacity:0; transform:translateY(16px); transition:opacity .75s cubic-bezier(.22,.61,.36,1), transform .75s cubic-bezier(.22,.61,.36,1)}
+.rv.in{opacity:1; transform:none}
+@media (prefers-reduced-motion: reduce){.rv{opacity:1; transform:none; transition:none}}
+[data-route]{display:none}
+[data-route].active{display:block}
+.skip{position:absolute; left:-9999px}
+.skip:focus{left:var(--pad); top:.6rem; z-index:100; background:var(--white); color:var(--navy); padding:.6rem 1rem; border-radius:3px}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="hdr">
-  <div class="wrap hdr__in">
-    <a class="hdr__logo" href="index.html" aria-label="Timeless Venture Lab — home">
-      <img src="assets/img/logo-lockup-white.png" alt="Timeless Venture Group" width="586" height="176">
-      <span class="hdr__unit">Lab</span>
+<header class="header" id="header-labs">
+  <div class="container header__inner">
+    <a class="header__logo" href="#/" aria-label="Timeless Labs — home">
+      <span class="logo logo--mark" aria-hidden="true"></span>
+      <span class="header__logo-text">
+        <span class="header__logo-name">Timeless Labs</span>
+        <span class="header__logo-sub">AI &amp; Business Transformation</span>
+      </span>
     </a>
-    <nav class="hdr__nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="#what">What we do</a>
-      <a href="#how">How we work</a>
-      <a href="#proof">Why us</a>
-      <a href="#founder">Founder</a>
-      <a href="#contact">Contact</a>
-      <a href="lab.html" aria-current="page">The Lab</a>
+    <nav class="header__nav" aria-label="Timeless Labs">
+      <div class="header__segment" data-segment data-open="false">
+        <button type="button" aria-expanded="false">What We Do
+          <svg width="9" height="6" viewBox="0 0 9 6" aria-hidden="true"><path d="M1 1l3.5 3.5L8 1" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+        </button>
+        <div class="header__service-list">
+          <a href="#/what-we-do"><strong>AI Strategy &amp; Opportunity Mapping</strong><span>Find where AI creates real value.</span></a>
+          <a href="#/what-we-do"><strong>AI-Powered Business Transformation</strong><span>Redesign how work gets done.</span></a>
+          <a href="#/what-we-do"><strong>Intelligent Systems &amp; Implementation</strong><span>Move from strategy to working systems.</span></a>
+          <a href="#/what-we-do"><strong>Executive AI Enablement</strong><span>Prepare leaders for what comes next.</span></a>
+        </div>
+      </div>
+      <a href="#/approach" data-nav="approach">Our Approach</a>
+      <a href="#/insights" data-nav="insights">Insights</a>
+      <a href="#/about" data-nav="about">About</a>
+      <a href="index.html">Venture Group</a>
     </nav>
-    <a class="btn btn--solid hdr__cta" href="#contact">Start a conversation</a>
-    <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="drawer">
-      <span>Menu</span> <i aria-hidden="true"></i>
-    </button>
+    <a class="button button--white header__button" href="#/contact">Start a Conversation
+      <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+    </a>
+    <button class="header__menu-open" type="button" data-burger aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span class="t">Menu</span> <i></i></button>
   </div>
 </header>
 
-<div class="drawer" id="drawer" data-open="false">
-  <nav class="wrap drawer__nav" aria-label="Main">
-    <a href="index.html">Home</a>
-    <a href="#what">What we do</a>
-    <a href="#how">How we work</a>
-    <a href="#proof">Why us</a>
-    <a href="#founder">Founder</a>
-    <a href="#contact">Contact</a>
-    <a href="lab.html" aria-current="page">The Lab</a>
-    <a class="btn btn--solid" href="#contact">Start a conversation</a>
-  </nav>
+<div class="menu" id="menu" data-open="false">
+  <div class="container menu__nav">
+      <a href="#/">Overview</a>
+      <a href="#/what-we-do">What We Do</a>
+      <a href="#/approach">Our Approach</a>
+      <a href="#/insights">Insights</a>
+      <a href="#/about">About</a>
+      <a href="index.html">Venture Group</a>
+      <a class="button button--white" href="#/contact">Start a Conversation</a>
+  </div>
 </div>
 
 <main id="main">
+<!-- ============================================================
+     ROUTE: TIMELESS LABS — HOME
+     ============================================================ -->
+<div data-route="labs">
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
-    <div class="hero__bg" aria-hidden="true">
-      <svg viewBox="0 0 1200 700" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
-        <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
-          <g stroke-opacity=".20" stroke-dasharray="1.5 9" stroke-width="1.25">
-            <circle cx="940" cy="330" r="120"/>
-            <circle cx="940" cy="330" r="200"/>
-            <circle cx="940" cy="330" r="285"/>
-            <circle cx="940" cy="330" r="375"/>
-          </g>
-          <g stroke-opacity=".16" stroke-width="1.25">
-            <path d="M940 330 L722 236"/><path d="M940 330 L1155 210"/>
-            <path d="M940 330 L820 560"/><path d="M940 330 L1180 470"/>
-            <path d="M722 236 L1155 210"/><path d="M820 560 L1180 470"/>
-          </g>
-        </g>
-        <g fill="#FFFFFF" fill-opacity=".34">
-          <circle cx="722" cy="236" r="4"/><circle cx="1155" cy="210" r="4"/>
-          <circle cx="820" cy="560" r="4"/><circle cx="1180" cy="470" r="4"/>
-          <circle cx="655" cy="430" r="3"/><circle cx="1020" cy="115" r="3"/>
-        </g>
-        <circle cx="940" cy="330" r="9" fill="#FFFFFF" fill-opacity=".55"/>
-      </svg>
-    </div>
-    <img class="hero__mark" src="assets/img/logo-mark-white.png" alt="" aria-hidden="true">
-    <div class="wrap hero__in">
-      <h1 class="t-hero hero__title lift">Turn AI ambition into operating advantage.</h1>
-      <p class="lede hero__lede lift">Most organizations are already experimenting with AI. The constraint is no longer access to the models — it is capability, governance, and fit with how the work actually runs. We close that distance.</p>
-      <div class="btns hero__btns lift">
-        <a class="btn btn--solid" href="#contact">Start a conversation</a>
-        <a class="btn btn--ghost" href="#how">See how we work</a>
-      </div>
-      <div class="hero__meta lift">
-        <span>Timeless Venture Lab</span>
-        <span>Baltimore, Maryland</span>
-        <span>Building since 2022</span>
-        <span>AI, machine learning and distributed systems</span>
+  <section class="hero-section">
+    <div class="hero-section__bg" aria-hidden="true"></div>
+    <div class="hero-section__mark" aria-hidden="true"></div>
+    <div class="container hero-section__inner">
+      <span class="label rv">AI is not the transformation. How your organization uses it is.</span>
+      <h1 class="t-hero hero-section__title rv">Turn AI ambition into business advantage.</h1>
+      <p class="lede rv">Artificial intelligence is reshaping how organizations operate, compete, and create value. Timeless Labs helps leaders move beyond experimentation — identifying where AI matters, redesigning how work gets done, and building the capabilities required for lasting advantage.</p>
+      <div class="buttons hero-section__button rv">
+        <a class="button button--white" href="#/contact">Start a Conversation
+          <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </a>
+        <a class="button button--outline" href="#/approach">Explore Our Approach</a>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CLIENT STRIP ===================== -->
-  <div class="strip">
-    <div class="wrap strip__in">
-      <p class="strip__lab">Founders and teams we have worked alongside</p>
-      <ul class="strip__names">
-        <li>Liberation in AI Consulting</li>
-        <li>ThinkNodes</li>
-        <li>Megalf Global Network</li>
+  <!-- CAPABILITIES CAROUSEL -->
+  <section class="section">
+    <div class="container">
+      <div class="swiper-head">
+        <div class="swiper-head__text">
+          <span class="label rv">What We Do</span>
+          <h2 class="t-1 rv">Four capabilities, sequenced the way the work runs.</h2>
+        </div>
+        <div class="swiper-nav rv" data-nav-for="cap">
+          <button class="swiper-nav__button" type="button" data-prev aria-label="Previous">
+            <svg width="15" height="12" viewBox="0 0 15 12" aria-hidden="true"><path d="M6 1L1 6l5 5M1 6h13" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </button>
+          <button class="swiper-nav__button" type="button" data-next aria-label="Next">
+            <svg width="15" height="12" viewBox="0 0 15 12" aria-hidden="true"><path d="M9 1l5 5-5 5M14 6H1" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="swiper rv" data-carousel="cap">
+        <div class="swiper-wrapper" data-track tabindex="0" role="group" aria-label="Capabilities">
+          <div class="swiper-slide"><article class="info-card">
+            <span class="info-card__label">01 — Strategy</span>
+            <h3 class="info-card__title">AI Strategy &amp; Opportunity Mapping</h3>
+            <p class="info-card__text">Assess readiness, identify and prioritise use cases, quantify impact, and produce a roadmap you can fund and defend. Before building anything, determine what is worth building.</p>
+            <a class="link" href="#/what-we-do">Read more <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+          </article></div>
+          <div class="swiper-slide"><article class="info-card">
+            <span class="info-card__label">02 — Transformation</span>
+            <h3 class="info-card__title">AI-Powered Business Transformation</h3>
+            <p class="info-card__text">Workflow and process redesign, intelligent automation, AI-assisted decisions, knowledge systems, and agentic workflows — plus the operating model changes they require.</p>
+            <a class="link" href="#/what-we-do">Read more <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+          </article></div>
+          <div class="swiper-slide"><article class="info-card">
+            <span class="info-card__label">03 — Implementation</span>
+            <h3 class="info-card__title">Intelligent Systems &amp; AI Implementation</h3>
+            <p class="info-card__text">AI agents, custom applications, retrieval and knowledge systems, decision support, workflow integration, and the architecture underneath them.</p>
+            <a class="link" href="#/what-we-do">Read more <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+          </article></div>
+          <div class="swiper-slide"><article class="info-card">
+            <span class="info-card__label">04 — Enablement</span>
+            <h3 class="info-card__title">Executive AI Enablement &amp; Innovation</h3>
+            <p class="info-card__text">Executive briefings, leadership workshops, board education, innovation labs, and organizational AI literacy. Transformation is a leadership challenge, not only a technical one.</p>
+            <a class="link" href="#/what-we-do">Read more <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+          </article></div>
+        </div>
+        <div class="swiper-pagination" data-dots aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEXT SECTION -->
+  <section class="section text-section paper">
+    <div class="container center">
+      <span class="label rv">The Gap</span>
+      <h2 class="t-1 text-section__title rv">Close the gap between AI potential and organizational reality.</h2>
+      <p class="lede text-section__text rv">Most organizations now have AI curiosity, AI activity, and AI investment. Very few have AI advantage — artificial intelligence embedded in the processes and decisions that actually determine performance. The distance between the two is not technical. It is organizational, and it is where almost all of the unrealized value currently sits.</p>
+      <p class="lede text-section__text rv" style="margin-top:1.2rem; color:var(--paper-ink)">The challenge is no longer whether AI can do something. It is determining what it should do for your business — and building the capability to make that value real.</p>
+    </div>
+  </section>
+
+  <!-- TWO-COLUMN SPLIT -->
+  <section class="section">
+    <div class="container finance-section__inner">
+      <div>
+        <span class="label rv">Areas of Depth</span>
+        <h2 class="t-1 rv">Where we work most often.</h2>
+        <p class="text rv" style="margin-top:1.4rem">Technology is chosen after the problem is understood — never before. These are the areas where we hold working knowledge deep enough to be useful on day one.</p>
+        <div class="buttons rv" style="margin-top:2rem">
+          <a class="button button--outline" href="#/what-we-do">See what we do
+            <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </a>
+        </div>
+      </div>
+      <ul class="finance-section__list rv">
+        <li class="finance-section__item"><span class="finance-section__icon" aria-hidden="true"></span><div><h3>Agentic workflows &amp; automation</h3><p>Systems that carry out multi-step work with judgment, oversight, and clear handoffs to people.</p></div></li>
+        <li class="finance-section__item"><span class="finance-section__icon" aria-hidden="true"></span><div><h3>Knowledge &amp; retrieval systems</h3><p>Making an organization's own information usable at the moment a decision is being made.</p></div></li>
+        <li class="finance-section__item"><span class="finance-section__icon" aria-hidden="true"></span><div><h3>Decision intelligence</h3><p>AI-assisted decisions where the reasoning, the inputs, and the accountability all remain legible.</p></div></li>
+        <li class="finance-section__item"><span class="finance-section__icon" aria-hidden="true"></span><div><h3>Operating model design</h3><p>The structures, roles, and governance that determine whether a capability survives contact with the organization.</p></div></li>
+        <li class="finance-section__item"><span class="finance-section__icon" aria-hidden="true"></span><div><h3>Data readiness</h3><p>The unglamorous prerequisite. Most stalled AI programmes stall here, and it is cheaper to find out early.</p></div></li>
+        <li class="finance-section__item"><span class="finance-section__icon" aria-hidden="true"></span><div><h3>Emerging technology &amp; trust systems</h3><p>Where problems turn on trust, transparency, provenance, or data integrity, distributed approaches — including blockchain — enter the conversation. As an answer to a problem, not a starting position.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- APPROACH CAROUSEL -->
+  <section class="section paper">
+    <div class="container">
+      <div class="swiper-head">
+        <div class="swiper-head__text">
+          <span class="label rv">The Timeless Approach</span>
+          <h2 class="t-1 rv">Four stages, one outcome: AI that works in practice.</h2>
+          <p class="text rv" style="margin-top:1.2rem">Each stage has a defined output and a condition that must be met before the next begins. The point of a small method is that everyone can hold it in their head — including your team.</p>
+        </div>
+        <div class="swiper-nav rv" data-nav-for="approach">
+          <button class="swiper-nav__button" type="button" data-prev aria-label="Previous">
+            <svg width="15" height="12" viewBox="0 0 15 12" aria-hidden="true"><path d="M6 1L1 6l5 5M1 6h13" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </button>
+          <button class="swiper-nav__button" type="button" data-next aria-label="Next">
+            <svg width="15" height="12" viewBox="0 0 15 12" aria-hidden="true"><path d="M9 1l5 5-5 5M14 6H1" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="swiper rv" data-carousel="approach">
+        <div class="swiper-wrapper" data-track tabindex="0" role="group" aria-label="The Timeless Approach">
+          <div class="swiper-slide"><article class="info-card">
+            <span class="info-card__step">01</span>
+            <span class="info-card__label">See</span>
+            <h3 class="info-card__title">Understand the organization</h3>
+            <p class="info-card__text">Assess the business as it is — workflows, decisions, constraints, data reality, and AI readiness — before anyone proposes a solution.</p>
+          </article></div>
+          <div class="swiper-slide"><article class="info-card">
+            <span class="info-card__step">02</span>
+            <span class="info-card__label">Shape</span>
+            <h3 class="info-card__title">Define the transformation</h3>
+            <p class="info-card__text">Prioritise opportunities, design the strategy and operating model, and produce a roadmap with owners, sequencing, and measures.</p>
+          </article></div>
+          <div class="swiper-slide"><article class="info-card">
+            <span class="info-card__step">03</span>
+            <span class="info-card__label">Build</span>
+            <h3 class="info-card__title">Create working capability</h3>
+            <p class="info-card__text">Prototype, implement, integrate, and operationalise inside real business conditions, with real users, against the agreed measures.</p>
+          </article></div>
+          <div class="swiper-slide"><article class="info-card">
+            <span class="info-card__step">04</span>
+            <span class="info-card__label">Scale</span>
+            <h3 class="info-card__title">Expand what works</h3>
+            <p class="info-card__text">Measure outcomes, strengthen adoption and governance, retire what did not earn its place, and extend proven capability.</p>
+          </article></div>
+        </div>
+        <div class="swiper-pagination" data-dots aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <p class="marquee__title">Built at the intersection of</p>
+    <div class="marquee__inner">
+      <ul class="marquee__list" data-marquee>
+        <li>AI &amp; intelligent systems</li><li>Business strategy</li><li>Applied research</li><li>Enterprise transformation</li><li>Venture building</li><li>Executive leadership</li>
       </ul>
     </div>
   </div>
 
-  <!-- ===================== THE GAP ===================== -->
-  <section class="band paper">
-    <div class="wrap">
-      <div class="gap-grid">
-        <div>
-          <h2 class="t-1">Close the distance between what AI can do and what your organization can use.</h2>
-          <p class="copy" style="margin-top:1.5rem">Technology is not valuable because it is sophisticated. It becomes valuable when it changes how an organization operates, decides, and creates value. Most stalled AI programmes did not fail technically — they were well-executed answers to the wrong question, or good systems nobody adopted.</p>
-          <p class="copy">We work where those two things meet: enough technical depth to know what intelligent systems can genuinely do, and enough operating experience to make the change hold once it lands.</p>
+  <!-- ACCELERATE CTA -->
+  <section class="section accelerate-section">
+    <div class="container accelerate-section__inner">
+      <span class="label rv">How We Engage</span>
+      <h2 class="t-1 accelerate-section__title rv">Accelerate your AI roadmap.</h2>
+      <p class="lede accelerate-section__text rv">Five ways in, depending on where you are — from a single executive strategy session to an ongoing transformation partnership. Most relationships begin with the first and progress only as far as the value justifies.</p>
+      <div class="buttons rv">
+        <a class="button button--white" href="#/approach">See how we engage
+          <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </a>
+        <a class="button button--outline" href="#/contact">Start a Conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED: FOUNDER -->
+  <section class="section paper">
+    <div class="container news-section__inner">
+      <div class="news-section__image-block rv">
+        <span class="news-section__label">Founder &amp; Principal</span>
+        <!-- PORTRAIT SLOT: replace the span below with <img src="..." alt="Temitope Ajibola"> -->
+        <span class="news-section__img" aria-hidden="true"></span>
+      </div>
+      <div>
+        <span class="label rv">Leadership</span>
+        <h2 class="t-1 rv">Founded at the intersection of AI, business &amp; innovation.</h2>
+        <div class="news-section__categories rv" style="margin-top:1.4rem">
+          <span class="news-section__category">Doctoral research</span>
+          <span class="news-section__category">MBA</span>
+          <span class="news-section__category">Enterprise technology</span>
+          <span class="news-section__category">Venture building</span>
+          <span class="news-section__category">Speaking</span>
         </div>
-        <div class="dgwrap orbit">
-          <svg class="dg" viewBox="0 -16 560 500" role="img"
-               aria-label="Diagram: operations, customer service, risk and compliance, finance, knowledge work, sales and marketing, and frontline delivery all converge on the work Timeless does.">
-            <path class="arc" d="M442 34 C 372 -8 236 -6 186 34 C 118 88 58 132 46 196
-                                 C 32 268 54 330 96 372 C 148 424 224 448 296 442"/>
-            <path class="arc" d="M492 156 C 506 204 486 238 428 246"/>
-            <path class="head" d="M430 240 l -14 6 l 14 6 z"/>
-            <circle class="hub" cx="330" cy="250" r="82"/>
-            <image href="assets/img/logo-mark-navy.png" x="288" y="216" width="84" height="68"
-                   preserveAspectRatio="xMidYMid meet"/>
-            <text class="sub" x="330" y="356" text-anchor="middle">the work itself</text>
-            <rect class="box" x="120" y="16" width="132" height="38" rx="19"/><text class="lbl" x="186" y="40" text-anchor="middle">Operations</text>
-            <rect class="box" x="352" y="16" width="172" height="38" rx="19"/><text class="lbl" x="438" y="40" text-anchor="middle">Customer service</text>
-            <rect class="box" x="38" y="116" width="200" height="38" rx="19"/><text class="lbl" x="138" y="140" text-anchor="middle">Risk and compliance</text>
-            <rect class="box" x="424" y="116" width="112" height="38" rx="19"/><text class="lbl" x="480" y="140" text-anchor="middle">Finance</text>
-            <rect class="box" x="6" y="212" width="172" height="38" rx="19"/><text class="lbl" x="92" y="236" text-anchor="middle">Knowledge work</text>
-            <rect class="box" x="34" y="306" width="196" height="38" rx="19"/><text class="lbl" x="132" y="330" text-anchor="middle">Sales and marketing</text>
-            <rect class="box" x="196" y="424" width="178" height="38" rx="19"/><text class="lbl" x="285" y="448" text-anchor="middle">Frontline delivery</text>
-          </svg>
+        <p class="text rv"><strong style="color:var(--paper-ink); font-weight:600">Temitope Ajibola</strong> is an AI and business transformation leader, researcher, entrepreneur, and speaker. Timeless Labs exists because the work he was already doing sat in four places at once — the technical depth to know what intelligent systems can actually do, the business grounding to know what that is worth, the research discipline to tell a real result from a demonstration, and the operating experience to get any of it adopted.</p>
+        <p class="news-section__quote rv">“The most important question is no longer what AI can do. It is what your organization can become because of it.”</p>
+        <div class="buttons rv" style="margin-top:2rem">
+          <a class="button button--navy" href="https://temitopeajibola.com" target="_blank" rel="noopener">Meet the Founder
+            <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </a>
+          <a class="button button--outline-navy" href="#/about">About Timeless Labs</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== TWO PATHS ===================== -->
-  <section class="band" id="what">
-    <div class="wrap">
-      <div class="shead">
-        <h2 class="t-1">Two paths, and the delivery that keeps them running.</h2>
-        <p class="copy head-copy">Every engagement starts by understanding the business as it is. From there the work goes one of two ways — building capability inside your teams, or building systems your teams own.</p>
+  <!-- INSIGHTS CAROUSEL -->
+  <section class="section">
+    <div class="container">
+      <div class="swiper-head">
+        <div class="swiper-head__text">
+          <span class="label rv">Insights</span>
+          <h2 class="t-1 rv">Perspectives for people who have to decide.</h2>
+        </div>
+        <div class="swiper-nav rv" data-nav-for="media">
+          <button class="swiper-nav__button" type="button" data-prev aria-label="Previous">
+            <svg width="15" height="12" viewBox="0 0 15 12" aria-hidden="true"><path d="M6 1L1 6l5 5M1 6h13" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </button>
+          <button class="swiper-nav__button" type="button" data-next aria-label="Next">
+            <svg width="15" height="12" viewBox="0 0 15 12" aria-hidden="true"><path d="M9 1l5 5-5 5M14 6H1" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </button>
+        </div>
       </div>
+      <div class="swiper swiper--wide rv" data-carousel="media">
+        <div class="swiper-wrapper" data-track tabindex="0" role="group" aria-label="Insights">
+          <div class="swiper-slide"><article class="media-card">
+            <div class="media-card__img"></div>
+            <div class="media-card__text">
+              <div class="media-card__tags"><span class="media-card__tag">AI &amp; Business Transformation</span></div>
+              <h3 class="media-card__title">First article slot — ready for publication.</h3>
+              <p class="media-card__meta">Headline, excerpt, and date drop in here.</p>
+            </div>
+          </article></div>
+          <div class="swiper-slide"><article class="media-card">
+            <div class="media-card__img"></div>
+            <div class="media-card__text">
+              <div class="media-card__tags"><span class="media-card__tag">The Intelligent Enterprise</span></div>
+              <h3 class="media-card__title">Second article slot — ready for publication.</h3>
+              <p class="media-card__meta">Headline, excerpt, and date drop in here.</p>
+            </div>
+          </article></div>
+          <div class="swiper-slide"><article class="media-card">
+            <div class="media-card__img"></div>
+            <div class="media-card__text">
+              <div class="media-card__tags"><span class="media-card__tag">Leadership in the AI Age</span></div>
+              <h3 class="media-card__title">Third article slot — ready for publication.</h3>
+              <p class="media-card__meta">Headline, excerpt, and date drop in here.</p>
+            </div>
+          </article></div>
+          <div class="swiper-slide"><article class="media-card">
+            <div class="media-card__img"></div>
+            <div class="media-card__text">
+              <div class="media-card__tags"><span class="media-card__tag">Emerging Technology</span></div>
+              <h3 class="media-card__title">Fourth article slot — ready for publication.</h3>
+              <p class="media-card__meta">Headline, excerpt, and date drop in here.</p>
+            </div>
+          </article></div>
+        </div>
+        <div class="swiper-pagination" data-dots aria-hidden="true"></div>
+      </div>
+      <div class="rv" style="margin-top:2.4rem">
+        <a class="link" href="#/insights">See all insights <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+      </div>
+    </div>
+  </section>
+</div>
 
-      <article class="path path--first">
+<!-- ============================================================
+     ROUTE: WHAT WE DO
+     ============================================================ -->
+<div data-route="what-we-do">
+  <section class="section section--tight" style="border-bottom:1px solid var(--line-soft); padding-top:clamp(3.5rem,7vw,5.5rem)">
+    <div class="container">
+      <span class="label rv">What We Do</span>
+      <h1 class="t-hero rv" style="max-width:16ch">Four capabilities. One continuous line from question to capability.</h1>
+      <p class="lede rv" style="margin-top:1.8rem">Each capability stands on its own. Together they describe the full distance between an organization that is interested in AI and one that is measurably better because of it.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="cap-row rv" style="border-top:0">
         <div>
-          <h3 class="t-2">AI enablement and training</h3>
-          <p class="path__kicker">Build fluency where the decisions get made.</p>
+          <p class="cap-row__label">01 — Strategy</p>
+          <h2 class="t-2">AI Strategy &amp; Opportunity Mapping</h2>
+          <p class="cap-row__kicker">Find where AI creates real value.</p>
+          <p class="text" style="margin-top:1.2rem; font-size:.95rem">Before building anything, determine what is actually worth building.</p>
         </div>
         <div>
-          <p class="copy">Hands-on training grounded in your own workflows, with separate tracks for business and technical teams. Governance, risk, and appropriate use are built into how people learn to work with AI rather than bolted on afterwards. The measure of success is not attendance — it is whether the work looks different a month later.</p>
-          <ul class="bullets bullets--2">
-            <li>Executive and board briefings</li>
-            <li>Leadership working sessions</li>
-            <li>Technical team enablement</li>
-            <li>Governance and appropriate-use frameworks</li>
-            <li>Workflow-specific practice</li>
-            <li>Organization-wide AI literacy</li>
+          <p class="text">The most expensive AI mistakes are not technical failures. They are well-executed projects aimed at the wrong thing. This capability exists to prevent that — by treating the question of <em>where</em> before the question of <em>how</em>.</p>
+          <ul class="list list--2">
+            <li>AI readiness assessment</li><li>Opportunity identification</li>
+            <li>Use-case prioritisation</li><li>Business impact evaluation</li>
+            <li>Risk and dependency mapping</li><li>Data readiness review</li>
+            <li>Build, buy, partner, or automate</li><li>Funded, sequenced AI roadmap</li>
           </ul>
-        </div>
-        <div class="dgwrap path__dg path__art">
-          <svg class="dg" viewBox="0 0 300 320" role="img"
-               aria-label="Diagram: business teams and technical teams train on separate tracks, meet on a shared vocabulary and guardrails, and the work changes.">
-            <rect class="box" x="4" y="8" width="132" height="44" rx="8"/>
-            <text class="lbl-s" x="70" y="30" text-anchor="middle">Business</text>
-            <text class="lbl-s" x="70" y="45" text-anchor="middle">teams</text>
-            <rect class="box" x="164" y="8" width="132" height="44" rx="8"/>
-            <text class="lbl-s" x="230" y="30" text-anchor="middle">Technical</text>
-            <text class="lbl-s" x="230" y="45" text-anchor="middle">teams</text>
-            <path class="arc" d="M70 56 C 70 96 150 96 150 118"/>
-            <path class="arc" d="M230 56 C 230 96 150 96 150 118"/>
-            <rect class="key" x="18" y="126" width="264" height="52" rx="8"/>
-            <text class="lbl-s" x="150" y="150" text-anchor="middle">Shared vocabulary</text>
-            <text class="sub" x="150" y="167" text-anchor="middle">and the guardrails around it</text>
-            <path class="ln" d="M150 182 L150 210"/>
-            <path class="head" d="M144 208 l 6 12 l 6 -12 z"/>
-            <rect class="box" x="18" y="220" width="264" height="44" rx="8"/>
-            <text class="lbl-s" x="150" y="240" text-anchor="middle">Practice inside real workflows</text>
-            <text class="sub" x="150" y="256" text-anchor="middle">not slideware</text>
-            <path class="ln" d="M150 268 L150 288"/>
-            <path class="head" d="M144 286 l 6 12 l 6 -12 z"/>
-            <text class="lbl" x="150" y="314" text-anchor="middle">The work looks different</text>
-          </svg>
+          <p class="text" style="margin-top:1.6rem"><strong style="color:var(--white); font-weight:600">What you end with:</strong> a prioritised set of opportunities, an honest view of what each is worth and what it depends on, and a roadmap you can take to a board.</p>
         </div>
       </article>
 
-      <article class="path">
+      <article class="cap-row rv">
         <div>
-          <h3 class="t-2">Intelligent systems and AI agents</h3>
-          <p class="path__kicker">From discovery through production, inside your infrastructure.</p>
+          <p class="cap-row__label">02 — Transformation</p>
+          <h2 class="t-2">AI-Powered Business Transformation</h2>
+          <p class="cap-row__kicker">Redesign how work gets done.</p>
+          <p class="text" style="margin-top:1.2rem; font-size:.95rem">The greatest value of AI often comes not from adding it to existing processes, but from rethinking the processes themselves.</p>
         </div>
         <div>
-          <p class="copy">We design and build the systems that carry the work: agents that complete multi-step tasks with oversight, retrieval systems that make your own information usable at the moment of decision, and automation that fits the process rather than replacing it wholesale. Decision logic follows your rules, and auditability is designed in from the first sprint.</p>
-          <ul class="bullets bullets--2">
-            <li>AI agents and agentic workflows</li>
-            <li>Predictive analytics</li>
-            <li>Knowledge and retrieval systems</li>
-            <li>Pattern and anomaly detection</li>
-            <li>Intelligent process automation</li>
-            <li>Decision support</li>
+          <p class="text">Most organizations apply AI to a process that was designed for constraints that no longer exist. The result is a faster version of the wrong workflow. Our strongest work happens here: taking a critical process apart and rebuilding it around what is now possible.</p>
+          <ul class="list list--2">
+            <li>Workflow transformation</li><li>Process redesign</li>
+            <li>Intelligent automation</li><li>AI-assisted decision-making</li>
+            <li>Knowledge systems</li><li>Agentic workflows</li>
+            <li>Operating model evolution</li><li>Role and accountability design</li>
           </ul>
-          <p class="path__note"><strong>Where trust is the problem, not speed:</strong> for work that turns on provenance, tamper-evidence, or multi-party integrity, we bring distributed and smart-contract approaches in as an answer — never as a starting position.</p>
-        </div>
-        <div class="dgwrap path__dg path__art">
-          <svg class="dg" viewBox="0 0 300 366" role="img"
-               aria-label="Diagram: a request is retrieved against your data, reasoned over, acted on in your systems, and reviewed by a person, with every step written to an audit trail.">
-            <g>
-              <rect class="box" x="60" y="6" width="180" height="38" rx="8"/>
-              <text class="lbl-s" x="150" y="30" text-anchor="middle">Request</text>
-              <path class="ln" d="M150 46 L150 62"/><path class="head" d="M144 60 l 6 11 l 6 -11 z"/>
-              <rect class="box" x="60" y="74" width="180" height="46" rx="8"/>
-              <text class="lbl-s" x="150" y="94" text-anchor="middle">Retrieve</text>
-              <text class="sub" x="150" y="110" text-anchor="middle">your data, your rules</text>
-              <path class="ln" d="M150 122 L150 138"/><path class="head" d="M144 136 l 6 11 l 6 -11 z"/>
-              <rect class="key" x="60" y="150" width="180" height="38" rx="8"/>
-              <text class="lbl-s" x="150" y="174" text-anchor="middle">Reason</text>
-              <path class="ln" d="M150 190 L150 206"/><path class="head" d="M144 204 l 6 11 l 6 -11 z"/>
-              <rect class="box" x="60" y="218" width="180" height="46" rx="8"/>
-              <text class="lbl-s" x="150" y="238" text-anchor="middle">Act</text>
-              <text class="sub" x="150" y="254" text-anchor="middle">inside your systems</text>
-              <path class="ln" d="M150 266 L150 282"/><path class="head" d="M144 280 l 6 11 l 6 -11 z"/>
-              <rect class="box" x="60" y="294" width="180" height="38" rx="8"/>
-              <text class="lbl-s" x="150" y="318" text-anchor="middle">Person reviews</text>
-            </g>
-            <path class="arc" d="M240 313 C 282 313 282 169 244 169"/>
-            <path class="head" d="M250 163 l -12 6 l 12 6 z"/>
-            <text class="sub" x="288" y="245" text-anchor="middle" transform="rotate(90 288 245)">sent back</text>
-            <path class="arc" d="M60 25 C 18 25 18 313 56 313"/>
-            <text class="sub" x="14" y="169" text-anchor="middle" transform="rotate(-90 14 169)">audit trail</text>
-            <text class="lbl-s" x="150" y="356" text-anchor="middle">Outcome you can defend</text>
-          </svg>
+          <p class="text" style="margin-top:1.6rem"><strong style="color:var(--white); font-weight:600">What you end with:</strong> a redesigned process, the systems that run it, and a clear account of what changes for the people who work inside it.</p>
         </div>
       </article>
 
-      <article class="path">
+      <article class="cap-row rv">
         <div>
-          <h3 class="t-2">Continuous delivery</h3>
-          <p class="path__kicker">Adoption does not stop at launch.</p>
+          <p class="cap-row__label">03 — Implementation</p>
+          <h2 class="t-2">Intelligent Systems &amp; AI Implementation</h2>
+          <p class="cap-row__kicker">Move from strategy to working systems.</p>
+          <p class="text" style="margin-top:1.2rem; font-size:.95rem">The disciplined translation of business opportunity into working capability.</p>
         </div>
         <div>
-          <p class="copy">Once something works, the useful question becomes where else it applies. We stay embedded to monitor performance, retire what did not earn its place, and extend proven capability into the next workflow — with your team doing progressively more of the building each time.</p>
+          <p class="text">We are not a development shop, and a strategy that never becomes a working system is not a strategy. Implementation here means building the smallest real thing that proves the value, then hardening what earns the right to be hardened.</p>
+          <ul class="list list--2">
+            <li>AI agents</li><li>Custom AI applications</li>
+            <li>Knowledge and retrieval systems</li><li>Decision support systems</li>
+            <li>Intelligent automation</li><li>AI workflow integration</li>
+            <li>Prototyping and pilots</li><li>Emerging technology architecture</li>
+          </ul>
+          <p class="text" style="margin-top:1.6rem"><strong style="color:var(--white); font-weight:600">What you end with:</strong> systems in production, integrated with how your organization actually works, with the evaluation and governance to keep them trustworthy.</p>
         </div>
-        <div class="dgwrap path__dg path__art">
-          <svg class="dg" viewBox="0 0 300 300" role="img"
-               aria-label="Diagram: one proven workflow is measured, then extended into two more while what did not earn its place is retired.">
-            <rect class="key" x="74" y="8" width="152" height="42" rx="8"/>
-            <text class="lbl-s" x="150" y="27" text-anchor="middle">Proven workflow</text>
-            <text class="sub" x="150" y="43" text-anchor="middle">measured, not assumed</text>
-            <path class="arc" d="M150 52 C 150 84 50 78 50 108"/>
-            <path class="arc" d="M150 52 L150 108"/>
-            <path class="arc" d="M150 52 C 150 84 250 78 250 108"/>
-            <rect class="box" x="4" y="116" width="92" height="42" rx="8"/>
-            <text class="lbl-s" x="50" y="142" text-anchor="middle">Next team</text>
-            <rect class="box" x="204" y="116" width="92" height="42" rx="8"/>
-            <text class="lbl-s" x="250" y="142" text-anchor="middle">Next region</text>
-            <g opacity=".42">
-              <rect class="box" x="108" y="116" width="84" height="42" rx="8" stroke-dasharray="4 4"/>
-              <text class="lbl-s" x="150" y="142" text-anchor="middle">Retired</text>
-              <path class="ln" d="M120 152 L180 122"/>
-            </g>
-            <path class="arc" d="M50 160 C 50 196 150 190 150 218"/>
-            <path class="arc" d="M250 160 C 250 196 150 190 150 218"/>
-            <rect class="box" x="34" y="226" width="232" height="46" rx="8"/>
-            <text class="lbl-s" x="150" y="246" text-anchor="middle">Your team builds the next one</text>
-            <text class="sub" x="150" y="262" text-anchor="middle">we do progressively less</text>
-          </svg>
+      </article>
+
+      <article class="cap-row rv">
+        <div>
+          <p class="cap-row__label">04 — Enablement</p>
+          <h2 class="t-2">Executive AI Enablement &amp; Innovation</h2>
+          <p class="cap-row__kicker">Prepare leaders for what comes next.</p>
+          <p class="text" style="margin-top:1.2rem; font-size:.95rem">AI transformation is not only a technology challenge. It is a leadership challenge.</p>
+        </div>
+        <div>
+          <p class="text">Capability that leadership does not understand will not be defended, funded, or adopted. This work builds the shared literacy and judgment a leadership team needs to make AI decisions without outsourcing the thinking.</p>
+          <ul class="list list--2">
+            <li>Executive AI briefings</li><li>Leadership workshops</li>
+            <li>Board and executive education</li><li>AI strategy sessions</li>
+            <li>Innovation labs</li><li>Future-of-work sessions</li>
+            <li>Organizational AI literacy</li><li>Keynotes and speaking</li>
+          </ul>
+          <p class="text" style="margin-top:1.6rem"><strong style="color:var(--white); font-weight:600">What you end with:</strong> a leadership team that can tell a real opportunity from a demonstration, and can hold its own suppliers to account.</p>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- ===================== AREAS OF DEPTH ===================== -->
-  <section class="band paper">
-    <div class="wrap">
-      <div class="shead">
-        <h2 class="t-1">Where we go deep</h2>
-        <p class="copy head-copy">Technology gets chosen after the problem is understood, never before. These are the areas where we hold enough working knowledge to be useful on day one.</p>
+  <section class="section accelerate-section paper">
+    <div class="container accelerate-section__inner">
+      <h2 class="t-1 accelerate-section__title rv">Not sure which of these you need?</h2>
+      <p class="lede accelerate-section__text rv">That is usually the right place to start. Most engagements begin with a conversation about what you are actually trying to change.</p>
+      <div class="buttons rv">
+        <a class="button button--navy" href="#/contact">Start a Conversation
+          <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </a>
+        <a class="button button--outline-navy" href="#/approach">See how we work</a>
       </div>
-      <div class="grid grid--4">
-        <article class="tile">
-          <div class="tile__dg">
-            <svg class="dg" viewBox="0 0 200 108" aria-hidden="true">
-              <g class="glyph">
-                <rect x="10" y="42" width="40" height="26" rx="5"/>
-                <rect x="80" y="42" width="40" height="26" rx="5"/>
-                <rect x="150" y="42" width="40" height="26" rx="5"/>
-                <path d="M50 55 L74 55"/><path d="M120 55 L144 55"/>
-                <path d="M100 42 C 100 14 30 14 30 40"/>
-              </g>
-              <path class="head" d="M74 51 l 8 4 l -8 4 z"/>
-              <path class="head" d="M144 51 l 8 4 l -8 4 z"/>
-              <path class="head" d="M26 40 l 4 8 l 4 -8 z"/>
-              <circle class="glyph-fill" cx="100" cy="86" r="3"/>
-              <path class="glyph" d="M100 68 L100 80" stroke-dasharray="2 4"/>
-            </svg>
-          </div>
-          <div class="tile__body">
-            <h3>Agentic workflows</h3>
-            <p>Systems that carry out multi-step work with judgment, oversight, and clear handoffs back to people.</p>
-          </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     ROUTE: OUR APPROACH
+     ============================================================ -->
+<div data-route="approach">
+  <section class="section section--tight" style="border-bottom:1px solid var(--line-soft); padding-top:clamp(3.5rem,7vw,5.5rem)">
+    <div class="container">
+      <span class="label rv">The Timeless Approach</span>
+      <h1 class="t-hero rv" style="max-width:14ch">See. Shape. Build. Scale.</h1>
+      <p class="lede rv" style="margin-top:1.8rem">Four stages, each with a defined output and a condition that must be met before the next one begins. The point of a small method is that everyone can hold it in their head — including your team.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cols cols--2 rv">
+        <article class="info-card">
+          <span class="info-card__step">01</span>
+          <span class="info-card__label">Stage one — See</span>
+          <h3 class="info-card__title">Understand the organization</h3>
+          <p class="info-card__text">We assess the business as it is — its workflows, decisions, constraints, data reality, technology estate, and appetite for change — before anyone proposes a solution.</p>
+          <p class="info-card__text" style="color:var(--w-low)"><strong style="color:var(--white)">Exit condition:</strong> a shared, evidence-based picture of where value is currently lost or unavailable.</p>
         </article>
-        <article class="tile">
-          <div class="tile__dg">
-            <svg class="dg" viewBox="0 0 200 108" aria-hidden="true">
-              <g class="glyph">
-                <rect x="14" y="42" width="46" height="26" rx="5"/>
-                <path d="M60 55 L86 55"/>
-                <path d="M100 40 L114 55 L100 70 L86 55 Z"/>
-                <path d="M114 55 L140 34"/><path d="M114 55 L140 76"/>
-                <rect x="146" y="20" width="42" height="26" rx="5"/>
-                <rect x="146" y="64" width="42" height="26" rx="5"/>
-              </g>
-              <path class="head" d="M140 30 l 6 6 l -8 4 z"/>
-              <path class="head" d="M140 80 l 6 -6 l -8 -4 z"/>
-            </svg>
-          </div>
-          <div class="tile__body">
-            <h3>Decision intelligence</h3>
-            <p>AI-assisted decisions where the reasoning, the inputs, and the accountability all stay legible.</p>
-          </div>
+        <article class="info-card">
+          <span class="info-card__step">02</span>
+          <span class="info-card__label">Stage two — Shape</span>
+          <h3 class="info-card__title">Define the transformation</h3>
+          <p class="info-card__text">We prioritise the opportunities, design the strategy and the operating model changes it implies, and produce a roadmap with owners, sequencing, dependencies, and measures.</p>
+          <p class="info-card__text" style="color:var(--w-low)"><strong style="color:var(--white)">Exit condition:</strong> a decision leadership can fund, defend, and be held to.</p>
         </article>
-        <article class="tile">
-          <div class="tile__dg">
-            <svg class="dg" viewBox="0 0 200 108" aria-hidden="true">
-              <g class="glyph">
-                <rect x="16" y="20" width="46" height="18" rx="3"/>
-                <rect x="16" y="45" width="46" height="18" rx="3"/>
-                <rect x="16" y="70" width="46" height="18" rx="3"/>
-                <path d="M62 29 C 92 29 92 54 108 54"/>
-                <path d="M62 54 L108 54"/>
-                <path d="M62 79 C 92 79 92 54 108 54"/>
-                <circle cx="124" cy="54" r="16"/>
-                <path d="M136 66 L146 76"/>
-                <rect x="152" y="42" width="34" height="24" rx="5"/>
-              </g>
-              <path class="head" d="M146 50 l 8 4 l -8 4 z"/>
-            </svg>
-          </div>
-          <div class="tile__body">
-            <h3>Knowledge systems</h3>
-            <p>Making an organization's own information usable at the moment a decision is being made.</p>
-          </div>
+        <article class="info-card">
+          <span class="info-card__step">03</span>
+          <span class="info-card__label">Stage three — Build</span>
+          <h3 class="info-card__title">Create working capability</h3>
+          <p class="info-card__text">We prototype, implement, integrate, and operationalise — inside real business conditions, with real users, against the measures agreed in Shape.</p>
+          <p class="info-card__text" style="color:var(--w-low)"><strong style="color:var(--white)">Exit condition:</strong> a working system in use, with evidence of the outcome it was built to produce.</p>
         </article>
-        <article class="tile">
-          <div class="tile__dg">
-            <svg class="dg" viewBox="0 0 200 108" aria-hidden="true">
-              <g class="glyph">
-                <rect x="12" y="40" width="34" height="30" rx="4"/>
-                <rect x="58" y="40" width="34" height="30" rx="4"/>
-                <rect x="104" y="40" width="34" height="30" rx="4"/>
-                <path d="M46 55 L58 55"/><path d="M92 55 L104 55"/>
-                <path d="M158 34 L176 42 V60 C 176 72 167 80 158 84
-                         C 149 80 140 72 140 60 V42 Z"/>
-                <path d="M150 58 l 6 7 l 12 -14"/>
-              </g>
-              <path class="glyph" d="M138 55 L134 55" stroke-dasharray="2 3"/>
-            </svg>
-          </div>
-          <div class="tile__body">
-            <h3>Trust and integrity</h3>
-            <p>Provenance, tamper-evidence, and multi-party integrity, using distributed approaches where they genuinely fit.</p>
-          </div>
+        <article class="info-card">
+          <span class="info-card__step">04</span>
+          <span class="info-card__label">Stage four — Scale</span>
+          <h3 class="info-card__title">Expand what works</h3>
+          <p class="info-card__text">We measure outcomes, strengthen adoption and governance, retire what did not earn its place, and extend proven capability across the organization.</p>
+          <p class="info-card__text" style="color:var(--w-low)"><strong style="color:var(--white)">Exit condition:</strong> capability your organization owns and can run without us.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FOUR STAGES ===================== -->
-  <section class="band" id="how" style="background:var(--ink-deep)">
-    <div class="wrap">
-      <div class="shead">
-        <h2 class="t-1">See. Shape. Build. Scale.</h2>
-        <p class="copy head-copy">Four stages, each with one thing that must be true before the next begins. A method small enough for your team to hold in their head is a method your team can hold us to.</p>
+  <section class="section paper">
+    <div class="container">
+      <span class="label rv">Principles</span>
+      <h2 class="t-1 rv">Four commitments that shape every engagement.</h2>
+      <div class="cols cols--2 rv" style="margin-top:clamp(2rem,4vw,3rem)">
+        <div class="pillar"><h4>Business question first</h4><p>We do not start with a technology and search for a use. We start with a decision, a process, or a cost, and work backwards.</p></div>
+        <div class="pillar"><h4>Evidence over enthusiasm</h4><p>A demonstration is not a result. We are explicit about what has been proven, what is assumed, and what is still unknown.</p></div>
+        <div class="pillar"><h4>Adoption is part of the build</h4><p>A system nobody uses has produced nothing. Change, training, and accountability are designed in, not bolted on afterwards.</p></div>
+        <div class="pillar"><h4>Capability, not dependency</h4><p>The objective is an organization that can carry the work forward. We are successful when we are no longer necessary.</p></div>
       </div>
+    </div>
+  </section>
 
-      <div class="stages">
-        <div class="stage">
-          <span class="stage__n" aria-hidden="true">1</span>
-          <h3 class="stage__name">See</h3>
-          <p>Assess the business as it is — workflows, decisions, constraints, data reality, appetite for change — before anyone proposes a solution.</p>
-          <p class="stage__exit"><b>Before we move on</b>A shared, evidence-based picture of where value is currently lost.</p>
+  <section class="section">
+    <div class="container">
+      <span class="label rv">How We Engage</span>
+      <h2 class="t-1 rv">Five ways in, depending on where you are.</h2>
+      <div class="rv" style="margin-top:clamp(2rem,4vw,3rem)">
+        <div class="eng__row">
+          <h3 class="eng__name">Executive AI Strategy Session</h3>
+          <span class="eng__for">For leadership clarity</span>
+          <p class="eng__desc">A focused engagement with your leadership team to understand AI's implications for your organization and identify the strategic opportunities that deserve attention.</p>
         </div>
-        <div class="stage">
-          <span class="stage__n" aria-hidden="true">2</span>
-          <h3 class="stage__name">Shape</h3>
-          <p>Prioritise the opportunities, design the operating changes they imply, and produce a roadmap with owners, sequencing, and measures.</p>
-          <p class="stage__exit"><b>Before we move on</b>A decision leadership can fund, defend, and be held to.</p>
+        <div class="eng__row">
+          <h3 class="eng__name">AI Opportunity Assessment</h3>
+          <span class="eng__for">For deciding where to invest</span>
+          <p class="eng__desc">Identify, evaluate, and prioritise the AI opportunities with the strongest potential business impact — with reasoning made explicit enough for your team to challenge.</p>
         </div>
-        <div class="stage">
-          <span class="stage__n" aria-hidden="true">3</span>
-          <h3 class="stage__name">Build</h3>
-          <p>Prototype, implement, integrate, and operationalise — in real conditions, with real users, against the measures agreed in Shape.</p>
-          <p class="stage__exit"><b>Before we move on</b>A working system in use, with evidence of the outcome it was built to produce.</p>
+        <div class="eng__row">
+          <h3 class="eng__name">Transformation Sprint</h3>
+          <span class="eng__for">For one workflow or problem</span>
+          <p class="eng__desc">Move from a defined business challenge to a practical transformation design and an implementation roadmap your teams can execute.</p>
         </div>
-        <div class="stage">
-          <span class="stage__n" aria-hidden="true">4</span>
-          <h3 class="stage__name">Scale</h3>
-          <p>Measure outcomes, strengthen adoption and governance, retire what did not earn its place, and extend what did.</p>
-          <p class="stage__exit"><b>What you keep</b>Capability your organization owns and can run without us.</p>
+        <div class="eng__row">
+          <h3 class="eng__name">Intelligent Systems Build</h3>
+          <span class="eng__for">For organizations ready to implement</span>
+          <p class="eng__desc">Design and operationalise AI-enabled systems, automation, or intelligent workflows around a meaningful business objective.</p>
+        </div>
+        <div class="eng__row">
+          <h3 class="eng__name">Ongoing Transformation Partnership</h3>
+          <span class="eng__for">For long-term capability</span>
+          <p class="eng__desc">Work alongside leadership and internal teams to build, implement, measure, and scale AI capability across the organization over time.</p>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- ===================== NUMBERS + WHY ===================== -->
-  <section class="band paper" id="proof">
-    <div class="wrap">
-      <!-- EDIT ME — replace the three "00" values with real, defensible figures.
-           If a number cannot be substantiated, delete that tile rather than round up. -->
-      <div class="nums">
-        <div class="num">
-          <div class="num__v">2022</div>
-          <p class="num__l">Building AI and distributed systems since</p>
-        </div>
-        <div class="num">
-          <div class="num__v">00</div>
-          <p class="num__l">Organizations enabled</p>
-        </div>
-        <div class="num">
-          <div class="num__v">00</div>
-          <p class="num__l">Systems delivered into production</p>
-        </div>
-        <div class="num">
-          <div class="num__v">00</div>
-          <p class="num__l">Practitioners across the network</p>
-        </div>
-      </div>
-
-      <div class="shead" style="margin-top:clamp(3rem,6vw,4.5rem)">
-        <h2 class="t-1">Why Timeless</h2>
-      </div>
-      <div class="why">
-        <div class="why__item">
-          <h3>The business question comes first</h3>
-          <p>We do not start with a technology and look for somewhere to put it. We start with a decision, a process, or a cost, and work backwards.</p>
-        </div>
-        <div class="why__item">
-          <h3>Evidence over enthusiasm</h3>
-          <p>A demonstration is not a result. We are explicit about what has been proven, what is still assumed, and what nobody knows yet.</p>
-        </div>
-        <div class="why__item">
-          <h3>Adoption is part of the build</h3>
-          <p>A system nobody uses has produced nothing. Change, training, and accountability are designed in from the start, not handed over at the end.</p>
-        </div>
-        <div class="why__item">
-          <h3>Capability, not dependency</h3>
-          <p>We build alongside your team so the knowledge stays inside the organization. The engagement has gone well when you no longer need us.</p>
-        </div>
+  <section class="section accelerate-section paper">
+    <div class="container accelerate-section__inner">
+      <h2 class="t-1 accelerate-section__title rv">Every engagement starts at See.</h2>
+      <p class="lede accelerate-section__text rv">Including the short ones. Tell us what you are trying to change and we will tell you honestly whether we are the right people for it.</p>
+      <div class="buttons rv">
+        <a class="button button--navy" href="#/contact">Start a Conversation
+          <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </a>
       </div>
     </div>
   </section>
-  <!-- ===================== FOUNDER ===================== -->
-  <section class="band paper" id="founder">
-    <div class="wrap">
-      <div class="founder">
-        <div class="founder__portrait">
-          <img src="assets/img/founder.png" alt="Temitope Ajibola, founder of Timeless Venture Group" loading="lazy">
-        </div>
-        <div>
-          <h2 class="t-1">Temitope Ajibola</h2>
-          <p class="copy" style="margin-top:1.3rem">Founder and principal. Temitope works across four worlds that rarely sit in the same person: the technical understanding of what intelligent systems can do, the business grounding to judge what that is worth, the research discipline to tell a real result from a compelling demonstration, and the operating experience to get change adopted inside an organization.</p>
-          <p class="copy">He writes and speaks on artificial intelligence, innovation, entrepreneurship, and the future of work, and has built ventures and communities around the technologies reshaping how business gets done.</p>
-          <ul class="creds">
-            <li><b>Based</b><span>Baltimore, Maryland — Morgan State University</span></li>
-            <li><b>Focus</b><span>AI, machine learning, automation, and distributed systems</span></li>
-            <li><b>Writing</b><span>Published on AI in healthcare, fintech inclusion, and talent mobility</span></li>
-            <li><b>Founded</b><span>Timeless Venture Group LLC, 2022</span></li>
-          </ul>
-          <p class="pullquote">The important question is no longer what AI can do. It is what your organization can become because of it.</p>
-        </div>
+</div>
+
+<!-- ============================================================
+     ROUTE: INSIGHTS
+     ============================================================ -->
+<div data-route="insights">
+  <section class="section section--tight" style="border-bottom:1px solid var(--line-soft); padding-top:clamp(3.5rem,7vw,5.5rem)">
+    <div class="container">
+      <span class="label rv">Insights</span>
+      <h1 class="t-hero rv" style="max-width:15ch">Perspectives for people who have to decide.</h1>
+      <p class="lede rv" style="margin-top:1.8rem">Written for executives, not for the conference circuit. Intellectually serious, practically useful, and free of the vocabulary that makes most AI writing unreadable.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="label rv">Pillars</span>
+      <h2 class="t-1 rv">Five things we write about.</h2>
+      <div class="cols cols--3 rv" style="margin-top:clamp(2rem,4vw,3rem)">
+        <div class="pillar"><h4>AI &amp; Business Transformation</h4><p>How organizations move from AI interest to operational advantage — and why most of them stall in the same three places.</p></div>
+        <div class="pillar"><h4>The Intelligent Enterprise</h4><p>Agents, automation, knowledge systems, and what happens to the shape of work when software can carry out judgment-bearing tasks.</p></div>
+        <div class="pillar"><h4>Leadership in the AI Age</h4><p>How CEOs, boards, and executive teams should think, decide, and allocate when the technology is moving faster than the planning cycle.</p></div>
+        <div class="pillar"><h4>Emerging Technology</h4><p>Strategic perspectives on intelligent systems, distributed and trust technologies, and the developments that will matter to business.</p></div>
+        <div class="pillar"><h4>Innovation &amp; Ventures</h4><p>Building companies, ecosystems, and new sources of value in markets that emerging technology has newly opened.</p></div>
       </div>
     </div>
   </section>
 
-
-
-  <!-- ===================== CONTACT ===================== -->
-  <section class="band" id="contact" style="background:var(--ink-deep)">
-    <div class="wrap">
-      <div class="shead">
-        <h2 class="t-1">Start a conversation</h2>
-        <p class="copy head-copy">Tell us what you are trying to change. Write to us directly and a person reads it &mdash; if we are not the right people for the work, we will say so and point you toward someone who is.</p>
-        <p style="margin-top:1.8rem"><a class="btn btn--solid" href="mailto:contact@timelessventuregroup.com">Email us</a></p>
+  <section class="section paper">
+    <div class="container">
+      <span class="label rv">Latest</span>
+      <h2 class="t-1 rv">Published writing.</h2>
+      <p class="text rv" style="margin-top:1.3rem">Articles appear here as they are published.</p>
+      <div class="cols cols--3 rv" style="margin-top:clamp(2rem,4vw,3rem)">
+        <div class="slot"><span class="slot__tag">Article slot 01</span><p>Headline, category, date, and excerpt.</p></div>
+        <div class="slot"><span class="slot__tag">Article slot 02</span><p>Headline, category, date, and excerpt.</p></div>
+        <div class="slot"><span class="slot__tag">Article slot 03</span><p>Headline, category, date, and excerpt.</p></div>
       </div>
+    </div>
+  </section>
 
-      <div class="contact-grid">
-        <ul class="details">
-          <li>
-            <span class="lab">Email</span>
-              <a href="mailto:contact@timelessventuregroup.com">contact@timelessventuregroup.com</a>
-            </li>
-          <li>
-            <span class="lab">Phone</span>
-              <a href="tel:+16673548802">+1 (667) 354-8802</a>
-            </li>
-          <li>
-            <span class="lab">Office</span>
-              <p>7500 Old Harford Road<br>Baltimore, MD 21234</p>
-            </li>
-          <li>
-            <span class="lab">Elsewhere</span>
-              <p class="social">
-                <a href="https://www.linkedin.com/company/timeless-venture-group-llc/" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://twitter.com/timeless_vg" target="_blank" rel="noopener">X</a>
-                <a href="https://www.instagram.com/timeless_vg/" target="_blank" rel="noopener">Instagram</a>
-                <a href="https://medium.com/@temitopeajibola7" target="_blank" rel="noopener">Medium</a>
-              </p>
-            </li>
+  <section class="section accelerate-section">
+    <div class="container accelerate-section__inner">
+      <h2 class="t-1 accelerate-section__title rv">Want the thinking applied to your organization?</h2>
+      <p class="lede accelerate-section__text rv">Writing is where we work out the general case. Engagements are where it becomes specific.</p>
+      <div class="buttons rv">
+        <a class="button button--white" href="#/contact">Start a Conversation
+          <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     ROUTE: ABOUT
+     ============================================================ -->
+<div data-route="about">
+  <section class="section section--tight" style="border-bottom:1px solid var(--line-soft); padding-top:clamp(3.5rem,7vw,5.5rem)">
+    <div class="container">
+      <span class="label rv">About</span>
+      <h1 class="t-hero rv" style="max-width:16ch">We bridge what AI can do and what organizations should do with it.</h1>
+      <p class="lede rv" style="margin-top:1.8rem">Timeless Labs is the AI and business transformation arm of Timeless Venture Group. We work with leaders who are past the question of whether AI matters and into the harder question of what to do about it.</p>
+    </div>
+  </section>
+
+  <section class="section text-section">
+    <div class="container center">
+      <span class="label rv">Position</span>
+      <h2 class="t-1 text-section__title rv">Technology is not valuable because it is sophisticated.</h2>
+      <p class="lede text-section__text rv">It becomes valuable when it changes how an organization thinks, operates, decides, and creates value. That sentence is the whole reason this firm exists, and it is the standard we apply to our own recommendations before we make them.</p>
+      <p class="lede text-section__text rv" style="margin-top:1.2rem">There is no shortage of firms that can explain what artificial intelligence is capable of, and no shortage that can build software. The gap in the market is narrower and more valuable than either: knowing which of those capabilities is worth an organization's disruption, and seeing the change through to the point where it holds.</p>
+    </div>
+  </section>
+
+  <section class="section paper">
+    <div class="container">
+      <span class="label rv">Who We Work With</span>
+      <h2 class="t-1 rv">Built to be understood by the person signing off.</h2>
+      <div class="cols cols--2 rv" style="margin-top:clamp(2rem,4vw,3rem)">
+        <div class="pillar">
+          <span class="info-card__label">Primary</span>
+          <h4>Chief executives and owners</h4>
+          <p>CEOs, founders, business owners, and organizational leaders who can see that AI will reshape their industry and need help deciding where it should actually be applied, what is worth pursuing, and how to move past experimentation.</p>
+        </div>
+        <div class="pillar">
+          <span class="info-card__label">Secondary</span>
+          <h4>The leaders who have to deliver it</h4>
+          <p>CIOs, CTOs, chief innovation officers, heads of strategy, digital transformation leaders, data and AI teams, private equity and investment leaders, and enterprise innovation groups.</p>
+        </div>
+      </div>
+      <p class="text rv" style="margin-top:1.8rem">We keep the technical depth available and out of the way. A chief executive should be able to read anything we produce and know what it means for the business.</p>
+    </div>
+  </section>
+
+  <section class="section paper" style="padding-top:0">
+    <div class="container news-section__inner">
+      <div class="news-section__image-block rv">
+        <span class="news-section__label">Founder &amp; Principal</span>
+        <!-- PORTRAIT SLOT: replace the span below with <img src="..." alt="Temitope Ajibola"> -->
+        <span class="news-section__img" aria-hidden="true"></span>
+      </div>
+      <div>
+        <span class="label rv">Leadership</span>
+        <h2 class="t-1 rv">Temitope Ajibola</h2>
+        <p class="text rv" style="margin-top:1.3rem">Temitope Ajibola is an AI and business transformation leader, researcher, entrepreneur, and speaker. His work spans four worlds that rarely sit in the same person: the technical understanding of what intelligent systems can do, the business grounding to judge what that is worth, the research discipline to distinguish a real result from a compelling demonstration, and the operating experience to get change adopted inside an organization.</p>
+        <p class="text rv">He speaks and writes on artificial intelligence, innovation, entrepreneurship, leadership, and the future of work, and has built ventures, products, and innovation communities around the technologies reshaping how business is done.</p>
+        <ul class="creds rv">
+          <li><b>Research</b><span>Doctoral research and published technical scholarship in machine learning, intelligent systems, and blockchain security.</span></li>
+          <li><b>Business</b><span>MBA-level business education, focused on how technology creates strategic and economic value.</span></li>
+          <li><b>Enterprise</b><span>Experience across enterprise technology, AI, automation, data, and business workflow transformation.</span></li>
+          <li><b>Ventures</b><span>Founding and building companies, products, and innovation ecosystems.</span></li>
+          <li><b>Platform</b><span>Speaking on AI, innovation, leadership, entrepreneurship, and the future of work.</span></li>
         </ul>
-        <div class="dgwrap path__dg contact-art">
-            <svg class="dg" viewBox="0 0 424 128" role="img"
-                 aria-label="Diagram: a first conversation leads either to an assessment or straight to a build, and both lead to a decision you can fund.">
-              <rect class="key" x="4" y="44" width="104" height="40" rx="8"/>
-              <text class="lbl-s" x="56" y="68" text-anchor="middle">A conversation</text>
-              <path class="arc" d="M108 64 C 132 64 132 26 152 26"/>
-              <path class="arc" d="M108 64 C 132 64 132 102 152 102"/>
-              <rect class="box" x="156" y="6" width="104" height="40" rx="8"/>
-              <text class="lbl-s" x="208" y="30" text-anchor="middle">Assessment</text>
-              <rect class="box" x="156" y="82" width="104" height="40" rx="8"/>
-              <text class="lbl-s" x="208" y="106" text-anchor="middle">Build</text>
-              <path class="arc" d="M260 26 C 284 26 284 64 300 64"/>
-              <path class="arc" d="M260 102 C 284 102 284 64 300 64"/>
-              <path class="head" d="M298 58 l 12 6 l -12 6 z"/>
-              <text class="sub" x="318" y="60">a call</text>
-              <text class="sub" x="318" y="74">you can fund</text>
-          </svg>
+        <p class="news-section__quote rv">“The most important question is no longer what AI can do. It is what your organization can become because of it.”</p>
+        <div class="buttons rv" style="margin-top:2rem">
+          <a class="button button--navy" href="https://temitopeajibola.com" target="_blank" rel="noopener">Meet the Founder
+            <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CTA ===================== -->
-  <section class="band band--short paper">
-    <div class="wrap cta">
-      <img class="cta__mark" src="assets/img/logo-mark-navy.png" alt="" aria-hidden="true" loading="lazy">
-      <h2 class="t-1">Let's build what lasts.</h2>
-      <p class="lede">Whether you are mapping where AI fits, rethinking a critical process, or ready to put a system into production, we would like to understand what you are working toward.</p>
-      <div class="btns">
-        <a class="btn btn--ink" href="#contact">Start a conversation</a>
-        <a class="btn btn--ink-ghost" href="mailto:contact@timelessventuregroup.com">Email us directly</a>
+  <section class="section">
+    <div class="container">
+      <span class="label rv">Origin</span>
+      <h2 class="t-1 rv">Where this came from.</h2>
+      <p class="text rv" style="margin-top:1.4rem">We began with a conviction that emerging technologies would fundamentally reshape how organizations create trust, intelligence, and value. That work — in machine learning, intelligent systems, distributed and cryptographic technology — has since converged on a broader and more useful focus: helping organizations navigate the technologies that matter and transform their businesses around them.</p>
+      <p class="text rv">Those foundations have not been abandoned. Where a problem genuinely turns on trust, transparency, provenance, digital assets, or data integrity, distributed approaches remain part of how we solve it. They are simply no longer the headline. Artificial intelligence and business transformation are.</p>
+      <p class="text rv">Timeless Labs is one company within Timeless Venture Group — the venture and innovation platform that also builds and backs new companies.</p>
+      <div class="rv" style="margin-top:1.6rem">
+        <a class="link" href="index.html">See the Group <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
       </div>
     </div>
   </section>
+
+  <section class="section accelerate-section paper">
+    <div class="container accelerate-section__inner">
+      <h2 class="t-1 accelerate-section__title rv">Let's build what's next.</h2>
+      <p class="lede accelerate-section__text rv">Tell us what you are working toward. We will tell you honestly what we think it takes.</p>
+      <div class="buttons rv">
+        <a class="button button--navy" href="#/contact">Start a Conversation
+          <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     ROUTE: CONTACT
+     ============================================================ -->
+<div data-route="contact">
+  <section class="section" style="padding-top:clamp(3.5rem,7vw,5.5rem)">
+    <div class="container">
+      <span class="label rv">Contact</span>
+      <h1 class="t-hero rv" style="max-width:12ch">Let's build what's next.</h1>
+      <p class="lede rv" style="margin-top:1.8rem">Whether you are exploring AI's strategic implications, rethinking a critical business process, or ready to build new organizational capability, we would like to understand what you are working toward.</p>
+
+      <form class="form rv" data-tvg-form data-endpoint="" data-mailto="hello@timelessventuregroup.com" style="margin-top:clamp(2.5rem,5vw,3.5rem)">
+        <div class="form__pair">
+          <div class="field">
+            <label for="f-name">Name *</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Your full name">
+          </div>
+          <div class="field">
+            <label for="f-org">Organization *</label>
+            <input id="f-org" name="organization" type="text" autocomplete="organization" required placeholder="Company or institution">
+          </div>
+        </div>
+        <div class="form__pair">
+          <div class="field">
+            <label for="f-role">Role *</label>
+            <input id="f-role" name="role" type="text" autocomplete="organization-title" required placeholder="Your title">
+          </div>
+          <div class="field">
+            <label for="f-email">Email *</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="name@company.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-explore">What are you hoping to explore? *</label>
+          <textarea id="f-explore" name="exploring" required placeholder="The decision, process, or question you are working on."></textarea>
+        </div>
+        <div class="form__pair">
+          <div class="field">
+            <label for="f-size">Organization size (optional)</label>
+            <select id="f-size" name="organization_size">
+              <option value="">Select</option>
+              <option>1–50</option><option>51–250</option><option>251–1,000</option>
+              <option>1,001–10,000</option><option>10,000+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-area">Area of interest (optional)</label>
+            <select id="f-area" name="area_of_interest">
+              <option value="">Select</option>
+              <option>AI strategy &amp; opportunity mapping</option>
+              <option>AI-powered business transformation</option>
+              <option>Intelligent systems &amp; implementation</option>
+              <option>Executive enablement &amp; innovation</option>
+              <option>Speaking or executive briefing</option>
+              <option>Not yet sure</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <button class="button button--white" type="submit">Start the Conversation
+            <svg width="13" height="10" viewBox="0 0 13 10" aria-hidden="true"><path d="M8 1l4 4-4 4M12 5H0" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </button>
+        </div>
+        <p class="form__msg" data-form-msg role="status"></p>
+        <p class="form__note">We read every enquiry personally. If your question is better answered by someone else, we will say so and point you toward them.</p>
+      </form>
+
+      <div class="cols cols--3 rv" style="margin-top:clamp(3.5rem,7vw,5rem)">
+        <div class="pillar">
+          <span class="info-card__label">Engagements</span>
+          <h4>New client enquiries</h4>
+          <p>Strategy sessions, assessments, transformation sprints, systems builds, and ongoing partnerships.</p>
+        </div>
+        <div class="pillar">
+          <span class="info-card__label">Speaking</span>
+          <h4>Keynotes &amp; executive briefings</h4>
+          <p>Conferences, leadership offsites, board sessions, and organizational AI literacy programmes.</p>
+        </div>
+        <div class="pillar">
+          <span class="info-card__label">Group</span>
+          <h4>Ventures &amp; partnerships</h4>
+          <p>Company building, strategic initiatives, and investment conversations with Timeless Venture Group.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 </main>
 
-<footer class="ftr">
-  <div class="wrap">
-    <div class="ftr__top">
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
       <div>
-        <a class="ftr__logo" href="index.html" aria-label="Timeless Venture Group — home">
-          <img src="assets/img/logo-lockup-white.png" alt="Timeless Venture Group" width="586" height="176">
+        <a class="footer__logo" href="index.html" aria-label="Timeless Venture Group — home">
+          <span class="logo logo--full" role="img" aria-label="Timeless Venture Group"></span>
         </a>
-        <p class="ftr__blurb">Timeless Venture Lab is the AI enablement and intelligent systems practice of Timeless Venture Group. Baltimore, Maryland.</p>
+        <p class="footer__blurb">Timeless Labs is the AI and business transformation arm of Timeless Venture Group.</p>
       </div>
-      <div>
-        <h5>What we do</h5>
-        <ul class="ftr__menu">
-          <li><a href="#what">AI enablement and training</a></li>
-          <li><a href="#what">Intelligent systems and agents</a></li>
-          <li><a href="#what">Continuous delivery</a></li>
-          <li><a href="#how">How we work</a></li>
+      <div class="footer__block">
+        <h5>Timeless Labs</h5>
+        <ul class="footer__menu">
+          <li><a href="#/">Overview</a></li>
+          <li><a href="#/what-we-do">What We Do</a></li>
+          <li><a href="#/approach">Our Approach</a></li>
+          <li><a href="#/insights">Insights</a></li>
         </ul>
       </div>
-      <div>
-        <h5>Company</h5>
-        <ul class="ftr__menu">
+      <div class="footer__block">
+        <h5>The Group</h5>
+        <ul class="footer__menu">
           <li><a href="index.html">Timeless Venture Group</a></li>
-          <li><a href="#founder">Founder</a></li>
-          <li><a href="#proof">Why Timeless</a></li>
-          <li><a href="#founder">Founder</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#ventures">Ventures</a></li>
+          <li><a href="#/about">About</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer__block">
         <h5>Connect</h5>
-        <ul class="ftr__menu">
-          <li><a href="https://www.linkedin.com/company/timeless-venture-group-llc/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://twitter.com/timeless_vg" target="_blank" rel="noopener">X</a></li>
-          <li><a href="https://www.instagram.com/timeless_vg/" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://medium.com/@temitopeajibola7" target="_blank" rel="noopener">Medium</a></li>
+        <ul class="footer__menu">
+          <li><a href="#/contact">Start a Conversation</a></li>
+          <li><a href="https://temitopeajibola.com" target="_blank" rel="noopener">Founder &amp; Speaking</a></li>
+          <li><a href="#/contact">Media &amp; Enquiries</a></li>
         </ul>
       </div>
     </div>
-    <div class="ftr__bottom">
-      <span>&copy; <span data-year>2026</span> Timeless Venture Group LLC. All rights reserved.</span>
-      <span>AI, machine learning and distributed systems</span>
+    <div class="footer__bottom">
+      <span>&copy; <span id="yr">2026</span> Timeless Venture Group. All rights reserved.</span>
+      <span>AI &amp; Business Transformation</span>
     </div>
   </div>
 </footer>
@@ -1018,16 +1357,17 @@ p{margin:0}
 <script>
 (function(){
   "use strict";
+
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var menu = document.getElementById("menu");
 
-  requestAnimationFrame(function(){ document.body.classList.add("loaded"); });
+  /* marquee: duplicate so the loop is seamless */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-marquee]"), function(ul){
+    ul.innerHTML = ul.innerHTML + ul.innerHTML;
+  });
 
-  var y = document.querySelector("[data-year]");
-  if(y) y.textContent = new Date().getFullYear();
-
-  var drawer = document.getElementById("drawer");
-  function closeDrawer(){
-    drawer.setAttribute("data-open","false");
+  function closeMenu(){
+    menu.setAttribute("data-open","false");
     Array.prototype.forEach.call(document.querySelectorAll("[data-burger]"), function(b){
       b.setAttribute("aria-expanded","false");
     });
@@ -1035,41 +1375,140 @@ p{margin:0}
   document.addEventListener("click", function(e){
     var b = e.target.closest("[data-burger]");
     if(b){
-      var open = drawer.getAttribute("data-open") === "true";
-      drawer.setAttribute("data-open", open ? "false" : "true");
+      var open = menu.getAttribute("data-open") === "true";
+      menu.setAttribute("data-open", open ? "false" : "true");
       b.setAttribute("aria-expanded", open ? "false" : "true");
       return;
     }
-    if(e.target.closest(".drawer a")) closeDrawer();
+    if(e.target.closest(".menu a")) closeMenu();
   });
-  document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeDrawer(); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeMenu(); });
 
-  Array.prototype.forEach.call(document.querySelectorAll("[data-rail]"), function(root){
-    var name  = root.getAttribute("data-rail");
+  function reveal(scope){
+    var els = (scope || document).querySelectorAll(".rv");
+    if(reduce || !("IntersectionObserver" in window)){
+      Array.prototype.forEach.call(els, function(e){ e.classList.add("in"); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, {rootMargin:"0px 0px -8% 0px", threshold:0.05});
+    Array.prototype.forEach.call(els, function(e){ e.classList.remove("in"); io.observe(e); });
+  }
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  /* ---------- carousels ---------- */
+  var carousels = [];
+  Array.prototype.forEach.call(document.querySelectorAll("[data-carousel]"), function(root){
+    var name  = root.getAttribute("data-carousel");
     var track = root.querySelector("[data-track]");
+    var dots  = root.querySelector("[data-dots]");
     var nav   = document.querySelector('[data-nav-for="' + name + '"]');
-    if(!track || !nav) return;
-    var prev = nav.querySelector("[data-prev]");
-    var next = nav.querySelector("[data-next]");
-    var items = Array.prototype.slice.call(track.children);
+    var prev  = nav && nav.querySelector("[data-prev]");
+    var next  = nav && nav.querySelector("[data-next]");
+    var slides = Array.prototype.slice.call(track.children);
 
+    slides.forEach(function(_, i){
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "swiper-pagination-bullet";
+      b.setAttribute("aria-label", "Go to slide " + (i+1));
+      b.addEventListener("click", function(){
+        track.scrollTo({left: slides[i].offsetLeft - track.offsetLeft, behavior: reduce ? "auto" : "smooth"});
+      });
+      dots.appendChild(b);
+    });
     function step(){
-      if(items.length < 2) return track.clientWidth;
-      return Math.max(1, items[1].offsetLeft - items[0].offsetLeft);
+      if(slides.length < 2) return track.clientWidth;
+      return Math.max(1, slides[1].offsetLeft - slides[0].offsetLeft);
     }
-    function sync(){
-      var max = track.scrollWidth - track.clientWidth;
-      prev.disabled = track.scrollLeft <= 2;
-      next.disabled = track.scrollLeft >= max - 2;
-      nav.style.display = (max <= 2) ? "none" : "flex";
+    function update(){
+      var max = track.scrollWidth - track.clientWidth, x = track.scrollLeft;
+      if(prev) prev.disabled = x <= 2;
+      if(next) next.disabled = x >= max - 2;
+      var idx = Math.round(x / step());
+      Array.prototype.forEach.call(dots.children, function(d, i){
+        d.classList.toggle("swiper-pagination-bullet-active", i === idx);
+      });
+      var fits = track.scrollWidth <= track.clientWidth + 2;
+      dots.style.display = fits ? "none" : "flex";
+      if(nav) nav.style.display = fits ? "none" : "flex";
     }
-    prev.addEventListener("click", function(){ track.scrollBy({left:-step(), behavior: reduce ? "auto" : "smooth"}); });
-    next.addEventListener("click", function(){ track.scrollBy({left: step(), behavior: reduce ? "auto" : "smooth"}); });
-    track.addEventListener("scroll", function(){ clearTimeout(track._t); track._t = setTimeout(sync, 60); });
-    window.addEventListener("resize", function(){ clearTimeout(track._r); track._r = setTimeout(sync, 150); });
-    sync();
+    if(prev) prev.addEventListener("click", function(){ track.scrollBy({left:-step(), behavior: reduce ? "auto" : "smooth"}); });
+    if(next) next.addEventListener("click", function(){ track.scrollBy({left: step(), behavior: reduce ? "auto" : "smooth"}); });
+    track.addEventListener("scroll", function(){ clearTimeout(track._t); track._t = setTimeout(update, 60); });
+    window.addEventListener("resize", function(){ clearTimeout(track._r); track._r = setTimeout(update, 150); });
+    carousels.push(update);
   });
 
+  /* ---------- desktop dropdown ---------- */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-segment]"), function(seg){
+    var btn = seg.querySelector("button");
+    function set(open){
+      seg.setAttribute("data-open", open ? "true" : "false");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    btn.addEventListener("click", function(e){ e.stopPropagation(); set(seg.getAttribute("data-open") !== "true"); });
+    seg.addEventListener("mouseenter", function(){ set(true); });
+    seg.addEventListener("mouseleave", function(){ set(false); });
+    seg.addEventListener("focusout", function(e){ if(!seg.contains(e.relatedTarget)) set(false); });
+    document.addEventListener("click", function(){ set(false); });
+  });
+
+  /* ---------- routing ---------- */
+  var ROUTES = {
+    "":            {view:"labs",       title:"Timeless Labs"},
+    "/":           {view:"labs",       title:"Timeless Labs"},
+    "/what-we-do": {view:"what-we-do", title:"What We Do — Timeless Labs"},
+    "/approach":   {view:"approach",   title:"Our Approach — Timeless Labs", nav:"approach"},
+    "/insights":   {view:"insights",   title:"Insights — Timeless Labs", nav:"insights"},
+    "/about":      {view:"about",      title:"About — Timeless Labs", nav:"about"},
+    "/contact":    {view:"contact",    title:"Contact — Timeless Labs"}
+  };
+  var views = document.querySelectorAll("[data-route]");
+
+  function render(){
+    var hash = location.hash.replace(/^#/, "");
+    var r = ROUTES[hash] || ROUTES["/"];
+    Array.prototype.forEach.call(views, function(v){
+      v.classList.toggle("active", v.getAttribute("data-route") === r.view);
+    });
+    closeMenu();
+    document.title = r.title;
+    Array.prototype.forEach.call(document.querySelectorAll("[data-nav]"), function(a){
+      if(a.getAttribute("data-nav") === r.nav) a.setAttribute("aria-current","page");
+      else a.removeAttribute("aria-current");
+    });
+    var active = document.querySelector('[data-route="' + r.view + '"]');
+    reveal(active);
+    carousels.forEach(function(fn){ fn(); });
+    window.scrollTo({top:0, left:0, behavior:"auto"});
+  }
+  window.addEventListener("hashchange", render);
+  render();
+
+  /* ---- contact form -----------------------------------------------------
+     Set data-endpoint on the form to your form service URL (Formspree,
+     Basin, Netlify, your own handler) and submissions POST there.
+     Until then, the form composes an email to the address in data-mailto.
+  ----------------------------------------------------------------------- */
+  document.addEventListener("submit", function(e){
+    var form = e.target.closest("form[data-tvg-form]");
+    if(!form) return;
+    if(form.getAttribute("data-endpoint")) return;
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+    var d = new FormData(form);
+    var to = form.getAttribute("data-mailto") || "hello@timelessventuregroup.com";
+    var subject = "Enquiry from " + (d.get("name") || "") + (d.get("organization") ? " — " + d.get("organization") : "");
+    var lines = [];
+    d.forEach(function(v,k){ if(v) lines.push(k.charAt(0).toUpperCase() + k.slice(1) + ": " + v); });
+    var msg = form.querySelector("[data-form-msg]");
+    if(msg){
+      msg.setAttribute("data-show","true");
+      msg.textContent = "Thank you. Your email client is opening with these details — send the message and we will respond personally. If nothing opens, write to " + to + ".";
+    }
+    window.location.href = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n\n"));
+  });
 })();
 </script>
 </body>
